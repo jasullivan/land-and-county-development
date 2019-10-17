@@ -1,0 +1,79 @@
+/* reset for different browsers - normalize and reset not really needed anymore */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* better to inherit this from body so it's more future proof and is the standard approach */
+    box-sizing: inherit; 
+}
+
+
+/* Needs to be % so that it doesn't overide the browser default size. */
+/* this would mean users wouldn't be able to zoom in */
+/* font-size: 10px; */
+/* this defines what 1rem is*/
+.bgred {
+    background: red;
+}
+.bggreen {
+    background: green;
+}
+.bgblue {
+    background: blue;
+}
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    // @include respond(tab-port) { // width < 900?
+    //     font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    // }
+
+    @include respond(tab-port) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+
+
+body {
+    box-sizing: border-box; 
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    // &:hover {
+    //    color: inherit; 
+    // }
+    padding-bottom: 5px;
+    position: relative;
+//   text-decoration: none;
+//   transition: color .4s ease-out;
+}
+
+
+
+
+// a {
+//   color: #2F56B0;
+//   position: relative;
+//   text-decoration: none;
+//   transition: color .4s ease-out;
+// }
+
+a:hover {
+  color: inherit;
+  right: 0;
+  text-decoration: none;
+}
+
+

@@ -1,0 +1,63 @@
+.sticky {
+    position: fixed;
+//   top: 0;
+//   width: 100%;
+//   display: block;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+}
+.navigation {
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 10rem;
+    position: fixed;
+    width: 100%;
+    z-index: 2000;
+    animation: moveInTop 0.5s ease-out;
+    &__logo-box {
+        position: absolute;
+        // top: 4rem;
+        left: 4rem;
+    }
+    &__logo {
+        /* browser will identify the correct measurement for the remaining dimension */
+        height: 5.5rem;
+        backface-visibility: hidden;
+    }
+    &__main {
+        display: none;
+        @include respond(tab-port) {
+            display: inline-block;
+        }
+        position: absolute;
+        right: 4rem;
+        font-size: 2.25rem;
+        ul {
+            li {
+                float: left;
+                margin-right: 2rem;
+            }
+        }
+    }
+    &__link:hover:after {
+        border-color: #3ab54a;
+        right: 0;
+    }
+
+    &__link:after {
+        border-radius: 1em;
+        border-top: .1em solid #3ab54a;
+        content: "";
+        position: absolute;
+        right: 100%;
+        bottom: .14em;
+        left: 0;
+        transition: right 0.25s cubic-bezier(0,.5,0,1), border-color 0.25s ease-out;
+    }
+
+    &__link:hover:after {
+        right: 0;
+    }
+}

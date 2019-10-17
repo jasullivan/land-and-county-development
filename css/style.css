@@ -1,0 +1,359 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom2 {
+  0% {
+    opacity: 0; }
+  75% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+/* reset for different browsers - normalize and reset not really needed anymore */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* better to inherit this from body so it's more future proof and is the standard approach */
+  box-sizing: inherit; }
+
+/* Needs to be % so that it doesn't overide the browser default size. */
+/* this would mean users wouldn't be able to zoom in */
+/* font-size: 10px; */
+/* this defines what 1rem is*/
+.bgred {
+  background: red; }
+
+.bggreen {
+  background: green; }
+
+.bgblue {
+  background: blue; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (min-width: 900px) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (min-width: 1800px) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 5px;
+  position: relative; }
+
+a:hover {
+  color: inherit;
+  right: 0;
+  text-decoration: none; }
+
+body {
+  /* set in body so can use inheritance */
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  /* font-size: 16px; */
+  color: #777; }
+
+.heading-primary {
+  /* occasionally get wobble on animation. not known why but this is fixes it, */
+  /* this hides the back part of an element when we transform it */
+  backface-visibility: hidden;
+  margin-bottom: 2rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 4rem;
+    line-height: normal;
+    font-weight: 400;
+    /* animation: moveInLeft 5s infinite; */
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 3s
+        animation-iteration-count: 3; */ }
+    @media only screen and (min-width: 900px) {
+      .heading-primary--main {
+        font-size: 8rem; } }
+  .heading-primary--sub {
+    display: block;
+    font-size: 4rem;
+    line-height: normal;
+    font-weight: 400;
+    animation: moveInBottom 1s ease-out; }
+    @media only screen and (min-width: 900px) {
+      .heading-primary--sub {
+        font-size: 8rem; } }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: inline-block;
+  color: #222;
+  letter-spacing: 2px;
+  line-height: normal; }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+  color: #888; }
+
+.heading-paragraph {
+  width: 100%;
+  padding: 0rem 1rem 1rem 0;
+  font-size: 1.6rem;
+  line-height: normal;
+  animation: moveInBottom2 1s ease-out; }
+  .heading-paragraph:not(:last-child) {
+    margin-bottom: 1.6rem; }
+  @media only screen and (min-width: 900px) {
+    .heading-paragraph {
+      width: 40%;
+      font-size: 2.2rem;
+      line-height: 2.8rem; } }
+
+.paragraph {
+  font-size: 1.6rem;
+  line-height: normal; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 1.6rem; }
+
+.row {
+  max-width: 100%;
+  padding: 0 3rem; }
+  @media only screen and (min-width: 900px) {
+    .row {
+      max-width: 50rem; } }
+  .row:not(:last-child) {
+    margin-bottom: 6rem; }
+    @media only screen and (min-width: 900px) {
+      .row:not(:last-child) {
+        margin-bottom: 8rem; } }
+  @media only screen and (min-width: 900px) {
+    .row {
+      max-width: 140rem;
+      margin: 0 auto; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 6rem; }
+    @media only screen and (min-width: 900px) {
+      .row [class^="col-"]:not(:last-child) {
+        margin-right: 6rem; } }
+  @media only screen and (min-width: 900px) {
+    .row [class^="col-"] {
+      float: left; } }
+  .row .col-1-of-2 {
+    width: 100%; }
+    @media only screen and (min-width: 900px) {
+      .row .col-1-of-2 {
+        width: calc((100% - 6rem) / 2); } }
+  .row .col-1-of-3 {
+    width: 100%; }
+    @media only screen and (min-width: 900px) {
+      .row .col-1-of-3 {
+        width: calc((100% - 2 * 6rem) / 3); } }
+  .row .col-2-of-3 {
+    width: 100%; }
+    @media only screen and (min-width: 900px) {
+      .row .col-2-of-3 {
+        width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); } }
+  .row .col-1-of-4 {
+    width: 100%; }
+    @media only screen and (min-width: 900px) {
+      .row .col-1-of-4 {
+        width: calc((100% - 3 * 6rem) / 4); } }
+  .row .col-2-of-4 {
+    width: 100%; }
+    @media only screen and (min-width: 900px) {
+      .row .col-2-of-4 {
+        width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); } }
+  .row .col-3-of-4 {
+    width: 100%; }
+    @media only screen and (min-width: 900px) {
+      .row .col-3-of-4 {
+        width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); } }
+
+.header {
+  height: 100vh;
+  position: relative;
+  /*to bottom right,*/
+  /* adding these variables in an rgba only works in sass*/
+  /*rgba($color-primary-light, 0.8), 
+        rgba($color-primary-dark, 0.8)), */
+  background-attachment: scroll;
+  background-position: top;
+  background-image: url(../imgs/hero_img_01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* clip-path: polygon(x y, x y, x y, x y); measured from the t.left, t.right, b.right, b.left*/
+  color: #fff; }
+  .header__text-box {
+    position: absolute;
+    /* these absolute measurements are based on the parent */
+    top: 35%;
+    left: 4rem;
+    /* transform:translate measurements are based on the element itself */ }
+
+.angle-svg {
+  position: absolute;
+  top: 159px;
+  z-index: 3000; }
+  @media only screen and (min-width: 900px) {
+    .angle-svg {
+      top: 209px; } }
+
+.img-wrapper {
+  min-height: 225px;
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../imgs/background-house2.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media only screen and (min-width: 900px) {
+    .img-wrapper {
+      min-height: 300px; } }
+  .img-wrapper h2 {
+    font-size: 1.8rem;
+    width: 90%;
+    font-weight: normal;
+    color: #000;
+    text-align: center;
+    padding-bottom: 3rem; }
+    @media only screen and (min-width: 900px) {
+      .img-wrapper h2 {
+        font-size: 2.4rem;
+        width: 70%;
+        padding-bottom: 5.5rem; } }
+
+/* .logo-box:hover .logo {
+   animation: moveInRight 0.6s ease-out;
+}  */
+.sticky {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000; }
+
+.navigation {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 10rem;
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
+  animation: moveInTop 0.5s ease-out; }
+  .navigation__logo-box {
+    position: absolute;
+    left: 4rem; }
+  .navigation__logo {
+    /* browser will identify the correct measurement for the remaining dimension */
+    height: 5.5rem;
+    backface-visibility: hidden; }
+  .navigation__main {
+    display: none;
+    position: absolute;
+    right: 4rem;
+    font-size: 2.25rem; }
+    @media only screen and (min-width: 900px) {
+      .navigation__main {
+        display: inline-block; } }
+    .navigation__main ul li {
+      float: left;
+      margin-right: 2rem; }
+  .navigation__link:hover:after {
+    border-color: #3ab54a;
+    right: 0; }
+  .navigation__link:after {
+    border-radius: 1em;
+    border-top: .1em solid #3ab54a;
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: .14em;
+    left: 0;
+    transition: right 0.25s cubic-bezier(0, 0.5, 0, 1), border-color 0.25s ease-out; }
+  .navigation__link:hover:after {
+    right: 0; }
+
+.house-test {
+  width: 100%; }
+
+.section-property-padding {
+  padding: 6rem 0; }
+
+.section-property-padding-bottom {
+  padding: 0 0 6rem 0; }
