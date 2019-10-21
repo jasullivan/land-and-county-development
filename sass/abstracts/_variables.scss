@@ -1,9 +1,15 @@
 $content-width: 1000px;
 $breakpoint: 799px;
-$nav-height: 70px;
-$nav-background: #262626;
+
+// $nav-height: 70px;
+$nav-scroll-background: rgba(0,0,0,0.5);
 $nav-font-color: #ffffff;
-$link-hover-color: #2581dc;
+$link-hover-color: #3ab54a;
+
+// land an county colours
+$color-white: #fff;
+$color-black: #000;
+
 
 
 
@@ -24,7 +30,6 @@ $color-dark-grey: #777;
 $color-white: #fff;
 $color-black: #000;
 
-$color-green: #000;
 
 // FONT
 $default-font-size: 1.6rem;

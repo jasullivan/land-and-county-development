@@ -15,40 +15,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  80% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
 @keyframes moveInBottom {
   0% {
     opacity: 0; }
   50% {
-    opacity: 0;
-    transform: translateY(5rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInBottom2 {
-  0% {
-    opacity: 0; }
-  75% {
     opacity: 0;
     transform: translateY(5rem); }
   100% {
@@ -87,10 +57,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 html {
   font-size: 62.5%; }
-  @media only screen and (min-width: 900px) {
-    html {
-      font-size: 56.25%; } }
-  @media only screen and (min-width: 1800px) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
 
@@ -135,7 +102,7 @@ body {
     animation-timing-function: ease-out;
     /* animation-delay: 3s
         animation-iteration-count: 3; */ }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 56.25em) {
       .heading-primary--main {
         font-size: 8rem; } }
   .heading-primary--sub {
@@ -144,7 +111,7 @@ body {
     line-height: normal;
     font-weight: 400;
     animation: moveInBottom 1s ease-out; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 56.25em) {
       .heading-primary--sub {
         font-size: 8rem; } }
 
@@ -167,10 +134,10 @@ body {
   padding: 0rem 1rem 1rem 0;
   font-size: 1.6rem;
   line-height: normal;
-  animation: moveInBottom2 1s ease-out; }
+  animation: moveInBottom 1s ease-out; }
   .heading-paragraph:not(:last-child) {
     margin-bottom: 1.6rem; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 56.25em) {
     .heading-paragraph {
       width: 40%;
       font-size: 2.2rem;
@@ -185,15 +152,15 @@ body {
 .row {
   max-width: 100%;
   padding: 0 3rem; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 56.25em) {
     .row {
       max-width: 50rem; } }
   .row:not(:last-child) {
     margin-bottom: 6rem; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 8rem; } }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 56.25em) {
     .row {
       max-width: 140rem;
       margin: 0 auto; } }
@@ -204,40 +171,40 @@ body {
   .row [class^="col-"]:not(:last-child) {
     margin-right: 0;
     margin-bottom: 6rem; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 56.25em) {
       .row [class^="col-"]:not(:last-child) {
         margin-right: 6rem; } }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 56.25em) {
     .row [class^="col-"] {
       float: left; } }
   .row .col-1-of-2 {
     width: 100%; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 56.25em) {
       .row .col-1-of-2 {
         width: calc((100% - 6rem) / 2); } }
   .row .col-1-of-3 {
     width: 100%; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 56.25em) {
       .row .col-1-of-3 {
         width: calc((100% - 2 * 6rem) / 3); } }
   .row .col-2-of-3 {
     width: 100%; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 56.25em) {
       .row .col-2-of-3 {
         width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); } }
   .row .col-1-of-4 {
     width: 100%; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 56.25em) {
       .row .col-1-of-4 {
         width: calc((100% - 3 * 6rem) / 4); } }
   .row .col-2-of-4 {
     width: 100%; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 56.25em) {
       .row .col-2-of-4 {
         width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); } }
   .row .col-3-of-4 {
     width: 100%; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 56.25em) {
       .row .col-3-of-4 {
         width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); } }
 
@@ -262,14 +229,6 @@ body {
     left: 4rem;
     /* transform:translate measurements are based on the element itself */ }
 
-.angle-svg {
-  position: absolute;
-  top: 159px;
-  z-index: 3000; }
-  @media only screen and (min-width: 900px) {
-    .angle-svg {
-      top: 209px; } }
-
 .img-wrapper {
   min-height: 225px;
   position: relative;
@@ -282,7 +241,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 56.25em) {
     .img-wrapper {
       min-height: 300px; } }
   .img-wrapper h2 {
@@ -292,7 +251,7 @@ body {
     color: #000;
     text-align: center;
     padding-bottom: 3rem; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 56.25em) {
       .img-wrapper h2 {
         font-size: 2.4rem;
         width: 70%;
@@ -301,20 +260,15 @@ body {
 /* .logo-box:hover .logo {
    animation: moveInRight 0.6s ease-out;
 }  */
-.sticky {
-  position: fixed;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 2000; }
-
 .navigation {
-  color: #fff;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   height: 10rem;
-  position: fixed;
+  position: absolute;
   width: 100%;
-  z-index: 2000;
+  z-index: 1;
   animation: moveInTop 0.5s ease-out; }
   .navigation__logo-box {
     position: absolute;
@@ -328,7 +282,7 @@ body {
     position: absolute;
     right: 4rem;
     font-size: 2.25rem; }
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 56.25em) {
       .navigation__main {
         display: inline-block; } }
     .navigation__main ul li {
@@ -339,7 +293,7 @@ body {
     right: 0; }
   .navigation__link:after {
     border-radius: 1em;
-    border-top: .1em solid #3ab54a;
+    border-top: 0.1em solid #3ab54a;
     content: "";
     position: absolute;
     right: 100%;
@@ -349,6 +303,10 @@ body {
   .navigation__link:hover:after {
     right: 0; }
 
+.sticky {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5); }
+
 .house-test {
   width: 100%; }
 
@@ -357,3 +315,12 @@ body {
 
 .section-property-padding-bottom {
   padding: 0 0 6rem 0; }
+
+.angle-svg {
+  width: 100%;
+  position: absolute;
+  top: 14.2rem;
+  z-index: 3; }
+  @media only screen and (min-width: 56.25em) {
+    .angle-svg {
+      top: 21.2rem; } }

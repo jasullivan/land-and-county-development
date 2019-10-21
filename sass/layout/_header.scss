@@ -49,14 +49,7 @@
 //         clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
 //     }
 // }
-.angle-svg {
-    position: absolute;
-    top: 159px;
-    @include respond(tab-port) {
-        top: 209px;
-    }
-    z-index: 3000;
-}
+
 .img-wrapper {
     min-height: 225px;
     @include respond(tab-port) {

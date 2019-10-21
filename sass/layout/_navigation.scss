@@ -1,24 +1,16 @@
-.sticky {
-    position: fixed;
-//   top: 0;
-//   width: 100%;
-//   display: block;
-    background: rgba(0,0,0,0.5);
-    z-index: 2000;
-}
+
 .navigation {
-    color: $color-white;
+    color: $nav-font-color;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     height: 10rem;
-    position: fixed;
+    position: absolute;
     width: 100%;
-    z-index: 2000;
+    z-index: 1;
     animation: moveInTop 0.5s ease-out;
     &__logo-box {
         position: absolute;
-        // top: 4rem;
         left: 4rem;
     }
     &__logo {
@@ -42,13 +34,13 @@
         }
     }
     &__link:hover:after {
-        border-color: #3ab54a;
+        border-color: $link-hover-color;
         right: 0;
     }
 
     &__link:after {
         border-radius: 1em;
-        border-top: .1em solid #3ab54a;
+        border-top: .1em solid $link-hover-color;
         content: "";
         position: absolute;
         right: 100%;
@@ -60,4 +52,8 @@
     &__link:hover:after {
         right: 0;
     }
+}
+.sticky {
+    position: fixed;
+    background: $nav-scroll-background;
 }

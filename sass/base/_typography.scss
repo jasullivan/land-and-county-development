@@ -74,7 +74,7 @@ body {
     padding: 0rem 1rem 1rem 0;
     font-size: $default-font-size;
     line-height: normal;
-    animation: moveInBottom2 1s ease-out;
+    animation: moveInBottom 1s ease-out;
     &:not(:last-child) {
         margin-bottom: 1.6rem;
     }
