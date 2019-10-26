@@ -1,35 +1,80 @@
-
-.navigation {
-    color: $nav-font-color;
+.logo-box {
+    position: fixed;
+    top: 0;
+    left: 4rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    z-index: 2;
     height: 10rem;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
     animation: moveInTop 0.5s ease-out;
-    &__logo-box {
+
+    @include respond(tab-land) {
         position: absolute;
-        left: 4rem;
     }
     &__logo {
         /* browser will identify the correct measurement for the remaining dimension */
         height: 5.5rem;
         backface-visibility: hidden;
     }
-    &__main {
-        display: none;
-        @include respond(tab-port) {
-            display: inline-block;
-        }
+    &__menu-button {
+        color: red;
+        
+    }
+}
+.navigation {
+    color: $nav-font-color;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    // height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    background: $color-black;
+    z-index: 1;
+    right: -100vw;
+    // transition: all 1s;
+    @include respond(tab-land) {
         position: absolute;
-        right: 4rem;
+        height: 10rem;
+        background: none;
+        right: 0;
+        animation: moveInTop 0.5s ease-out;
+    }
+    &__main {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        
+        // top: 0;
+        // right: 0vw;
+
+        position: absolute;
+        
         font-size: 2.25rem;
+
+        @include respond(tab-land) {
+            display: inline-block;
+            width: 44.5rem;
+            
+        top: 3.1rem;
+            right: 4rem;
+        }
+        
         ul {
+            text-align: center;
+            width: 100vw;
+            @include respond(tab-land) {
+                width: 100%;
+            }
             li {
-                float: left;
-                margin-right: 2rem;
+
+                @include respond(tab-land) {
+                    float: left;
+                    margin-right: 2rem;
+                }
             }
         }
     }
@@ -53,7 +98,12 @@
         right: 0;
     }
 }
+.show-menu {
+    right: 0;
+}
 .sticky {
-    position: fixed;
-    background: $nav-scroll-background;
+    @include respond(tab-land) {
+        position: fixed;
+        background: $nav-scroll-background;
+    }
 }
