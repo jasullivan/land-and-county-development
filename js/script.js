@@ -1,17 +1,46 @@
-// sticky nav
+// sticky nav and mob menu
 window.onscroll = function () { stickyNav() };
 
-var navbar = document.querySelector(".navigation");
-var sticky = navbar.offsetTop + 100;
+const navbar = document.querySelector(".navigation");
+const logo = document.querySelector(".logo-box"); 
+const sticky = navbar.offsetTop + 100;
+const button = document.querySelector(".menu-button");
 
 function stickyNav() {
     if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
+        navbar.classList.add("sticky");
+        logo.classList.add("sticky");
     } else {
         navbar.classList.remove("sticky");
+        logo.classList.remove("sticky");
     }
 }
-// sticky nav ends
+
+button.addEventListener('click', e => {
+    console.log(this)
+    e.target.classList.toggle("menu-button__hamburger--open");
+    navbar.classList.toggle("show-menu");
+})
+
+document.addEventListener("DOMContentLoaded", function(e) {
+    if (window.innerWidth > 1200) {
+      navbar.classList.remove("show-menu");
+      navbar.classList.remove("navigation__offsite-container");
+    } else {
+      navbar.classList.add("navigation__offsite-container");
+    }
+    function resize() {
+        if (window.innerWidth > 1200) {
+            navbar.classList.remove("show-menu");
+            navbar.classList.remove("navigation__offsite-container");
+        } else {
+            navbar.classList.add("navigation__offsite-container");
+        }
+    }
+    window.onresize = resize;
+});
+// sticky nav and mob menu ends
+
 
 // function openNav() {
 //     document.getElementById("mySidenav").style.height = "100vh";
@@ -21,21 +50,7 @@ function stickyNav() {
 //     document.getElementById("mySidenav").style.height = "0";
 // }
 
-// mob nav button
-const button = document.querySelector('.logo-box__menu-button');
-const menu = document.querySelector('.navigation');
-button.addEventListener('click', e => {
-    menu.classList.toggle('show-menu');
-})
-// mob nav button ends
 
-// on resize hide mob nav
-document.addEventListener("DOMContentLoaded", function(e) {
-    function resize() {
-        if (window.innerWidth > 1200) {
-        menu.classList.remove('show-menu');
-        }
-    }
-  window.onresize = resize;
-});
-// on resize hide mob nav ends
+
+
+
