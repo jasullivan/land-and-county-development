@@ -5,14 +5,18 @@ const navbar = document.querySelector(".navigation");
 const logo = document.querySelector(".logo-box"); 
 const sticky = navbar.offsetTop + 100;
 const button = document.querySelector(".menu-button");
+const wrap = document.querySelector(".wrap");
 
 function stickyNav() {
-    if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky");
-        logo.classList.add("sticky");
+    if (window.pageYOffset > 0 && window.pageYOffset < 300) {
+        wrap.classList.add("pre-sticky"); 
+    }
+    else if (window.pageYOffset >= 300) {
+        // wrap.classList.remove("pre-sticky");
+        wrap.classList.add("sticky");
     } else {
-        navbar.classList.remove("sticky");
-        logo.classList.remove("sticky");
+        wrap.classList.remove("sticky");
+        wrap.classList.remove("pre-sticky");
     }
 }
 

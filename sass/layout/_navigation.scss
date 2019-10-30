@@ -1,3 +1,13 @@
+// .wrap {
+//     position: fixed;
+//     height: 10rem;
+//     width: 100%;
+//     z-index: 1;
+//     background: $nav-scroll-background;
+//     @include respond(tab-land) {
+
+//     }
+// }
 .logo-box {
     position: fixed;
     top: 0;
@@ -63,7 +73,6 @@
                 transform: scale(0);
             }
         }
-        
     }
 }
 .navigation {
@@ -148,9 +157,19 @@
 .show-menu {
     transform: translateX(-100vw);
 }
-.sticky {
+.pre-sticky {
     @include respond(tab-land) {
         position: fixed;
+        height: 10rem;
+        width: 100%;
+        z-index: 1;
         background: $nav-scroll-background;
+        top: -10rem;
+        transition: transform 0.3s ease-out;
+    }
+}
+.sticky {
+    @include respond(tab-land) {
+        transform: translateY(10rem);
     }
 }

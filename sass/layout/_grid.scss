@@ -20,20 +20,21 @@
 
     @include clearfix;
 
-    .col-direction__reversed {
-        &:not(:last-child) {
-            margin-right: 0;
-            margin-bottom: $gutter-vertical-xxsmall;
-        }
-        &:last-child {
-            @include respond(tab-port) {
-                margin-right: $gutter-horizontal;
-            }
-        }
-        @include respond(tab-port) {
-            float: right;
-        }
-    }
+    // [class^="col-"] {
+        
+    //     &:not(:last-child) {
+    //         margin-right: 0;
+    //         margin-bottom: $gutter-vertical-small;
+
+    //         @include respond(tab-port) {
+    //             margin-right: $gutter-horizontal;
+    //         }
+    //     }
+
+    //     @include respond(tab-port) {
+    //         float: left;
+    //     }
+    // }
 
     .col-direction__normal {
         &:not(:last-child) {
@@ -45,6 +46,22 @@
         }
         @include respond(tab-port) {
             float: left;
+        }
+    }
+
+    .col-direction__reversed {
+        &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: $gutter-vertical-xxsmall;
+        }
+        &:last-child {
+            
+            @include respond(tab-port) {
+                margin-right: $gutter-horizontal;
+            }
+        }
+        @include respond(tab-port) {
+            float: right;
         }
     }
 
