@@ -11,16 +11,16 @@
 .logo-box {
     position: fixed;
     top: 0;
-    // right: 4rem;
-    // left: 4rem;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     z-index: 2;
     height: 10rem;
+    background: $nav-scroll-background;
     animation: moveInTop 0.5s ease-out;
-    @include respond(tab-land) {
+    @include respond(tab-port) {
+        background: none;
         position: absolute;
         width: 20rem;
     }
@@ -36,9 +36,9 @@
         // display: block;
         position: absolute;
         right: 4rem;
-        margin: 1em;
+        margin: 0 1em 1em;
         width: 40px;
-        @include respond(tab-land) {
+        @include respond(tab-port) {
             display: none;
         }
         &:hover {
@@ -64,12 +64,18 @@
         }
         &__hamburger--open {
             &:before {
+                -webkit-transform: translateY(12px) rotate(135deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+                -ms-transform: translateY(12px) rotate(135deg); /* IE 9 */
                 transform: translateY(12px) rotate(135deg);
         }
             &:after {
+                -webkit-transform: translateY(-12px) rotate(-135deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+                -ms-transform: translateY(-12px) rotate(-135deg); /* IE 9 */
                 transform: translateY(-12px) rotate(-135deg);
         }
             & .menu-button__hamburger {
+                -webkit-transform: scale(0); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+                -ms-transform: scale(0); /* IE 9 */
                 transform: scale(0);
             }
         }
@@ -91,7 +97,7 @@
     &__offsite-container {
         transition: transform 0.3s ease-out;
     }
-    @include respond(tab-land) {
+    @include respond(tab-port) {
         position: absolute;
         height: 10rem;
         width: 56rem;
@@ -111,23 +117,23 @@
         
         font-size: 3.5rem;
 
-        @include respond(tab-land) {
+        @include respond(tab-port) {
             display: inline-block;
             // width: 44.5rem;
             top: 3.1rem;
             right: 4rem;
-            font-size: 2.25rem;
+            font-size: 2rem;
         }
         
         ul {
             text-align: center;
             width: 100vw;
-            @include respond(tab-land) {
+            @include respond(tab-port) {
                 width: 100%;
             }
             li {
 
-                @include respond(tab-land) {
+                @include respond(tab-port) {
                     float: left;
                     margin-right: 2rem;
                 }
@@ -155,10 +161,12 @@
     }
 }
 .show-menu {
+    -webkit-transform: translateX(-100vw); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+    -ms-transform: translateX(-100vw); /* IE 9 */
     transform: translateX(-100vw);
 }
 .pre-sticky {
-    @include respond(tab-land) {
+    @include respond(tab-port) {
         position: fixed;
         height: 10rem;
         width: 100%;
@@ -169,7 +177,7 @@
     }
 }
 .sticky {
-    @include respond(tab-land) {
+    @include respond(tab-port) {
         transform: translateY(10rem);
     }
 }

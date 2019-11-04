@@ -8,19 +8,13 @@
 .header {
     height: 100vh;
     position: relative;
-        /*to bottom right,*/
-        /* adding these variables in an rgba only works in sass*/
-        /*rgba($color-primary-light, 0.8), 
-        rgba($color-primary-dark, 0.8)), */
     background-attachment: scroll;
     background-position: top;
     background-image:url(../imgs/hero_img_01.jpg);
     background-repeat:no-repeat;
     background-size:cover;
-    /* clip-path: polygon(x y, x y, x y, x y); measured from the t.left, t.right, b.right, b.left*/
-    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    // clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     color: $color-white;
+    transition: all 1s;
     &__text-box {
         position: absolute;
         /* these absolute measurements are based on the parent */
@@ -29,26 +23,8 @@
         // left: 50%;
         /* transform:translate measurements are based on the element itself */
         // transform: translate(-50%, -50%);
-
-        // text-align: center;
     }
 }
-// .info-section {
-//     height: 500px;
-//     background: white;
-// }
-// .info-section-two {
-//     height: 110px;
-//     background: #fff;
-//     position: relative;
-//     top: -100px;
-//     -webkit-clip-path: polygon(0 5vh, 100% 0, 100% 100%, 0 100%);
-//     clip-path: polygon(0 5vh, 100% 0, 100% 100%, 0 100%);
-//     @include respond(tab-port) {
-//         -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
-//         clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
-//     }
-// }
 
 .img-wrapper {
     min-height: 225px;
@@ -56,7 +32,7 @@
         min-height: 300px;
     }
     position: relative;
-    opacity: 0.65;
+    opacity: 0.85;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

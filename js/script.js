@@ -28,14 +28,17 @@ button.addEventListener('click', e => {
 
 document.addEventListener("DOMContentLoaded", function(e) {
     if (window.innerWidth > 1200) {
-      navbar.classList.remove("show-menu");
-      navbar.classList.remove("navigation__offsite-container");
+        navbar.classList.remove("show-menu");
+        button.classList.remove('menu-button__hamburger--open');
+        navbar.classList.remove("navigation__offsite-container");
     } else {
       navbar.classList.add("navigation__offsite-container");
+      $('body').css({'overflow':'hidden'})
     }
     function resize() {
         if (window.innerWidth > 1200) {
             navbar.classList.remove("show-menu");
+            button.classList.remove('menu-button__hamburger--open');
             navbar.classList.remove("navigation__offsite-container");
         } else {
             navbar.classList.add("navigation__offsite-container");
