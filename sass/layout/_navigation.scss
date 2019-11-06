@@ -1,13 +1,13 @@
-// .wrap {
-//     position: fixed;
-//     height: 10rem;
-//     width: 100%;
-//     z-index: 1;
-//     background: $nav-scroll-background;
-//     @include respond(tab-land) {
-
-//     }
-// }
+body.is-open {
+    height: 100vh;
+    overflow-y: hidden;
+    position: fixed;
+}
+.wrap {
+    height: 10rem;
+    position: absolute;
+    width: 100%;
+}
 .logo-box {
     position: fixed;
     top: 0;
@@ -32,11 +32,11 @@
         left: 4rem;
     }
     .menu-button {
-        color: white;
+        // color: white;
         // display: block;
         position: absolute;
         right: 4rem;
-        margin: 0 1em 1em;
+        // margin: 0 1em 1em;
         width: 40px;
         @include respond(tab-port) {
             display: none;

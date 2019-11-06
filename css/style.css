@@ -251,37 +251,19 @@ body {
     left: 4rem;
     /* transform:translate measurements are based on the element itself */ }
 
-.img-wrapper {
-  min-height: 225px;
-  position: relative;
-  opacity: 0.85;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../imgs/background-house2.jpg);
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  @media only screen and (min-width: 56.25em) {
-    .img-wrapper {
-      min-height: 300px; } }
-  .img-wrapper h2 {
-    font-size: 1.8rem;
-    width: 90%;
-    font-weight: normal;
-    color: #000;
-    text-align: center;
-    padding-bottom: 3rem; }
-    @media only screen and (min-width: 56.25em) {
-      .img-wrapper h2 {
-        font-size: 2.4rem;
-        width: 70%;
-        padding-bottom: 5.5rem; } }
-
 /* .logo-box:hover .logo {
    animation: moveInRight 0.6s ease-out;
 }  */
+body.is-open {
+  height: 100vh;
+  overflow-y: hidden;
+  position: fixed; }
+
+.wrap {
+  height: 10rem;
+  position: absolute;
+  width: 100%; }
+
 .logo-box {
   position: fixed;
   top: 0;
@@ -305,10 +287,8 @@ body {
     position: relative;
     left: 4rem; }
   .logo-box .menu-button {
-    color: white;
     position: absolute;
     right: 4rem;
-    margin: 0 1em 1em;
     width: 40px; }
     @media only screen and (min-width: 56.25em) {
       .logo-box .menu-button {
@@ -436,11 +416,45 @@ body {
 .house-test {
   width: 100%; }
 
-.angle-svg {
-  width: 100%;
-  position: absolute;
-  top: 14.2rem;
-  z-index: 3; }
+.angle-divider {
+  min-height: 225px;
+  position: relative;
+  opacity: 0.85;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../imgs/background-house2.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   @media only screen and (min-width: 56.25em) {
-    .angle-svg {
-      top: 21.2rem; } }
+    .angle-divider {
+      min-height: 300px; } }
+  .angle-divider h2 {
+    font-size: 1.8rem;
+    width: 90%;
+    font-weight: normal;
+    color: #000;
+    text-align: center;
+    padding-bottom: 3rem; }
+    @media only screen and (min-width: 56.25em) {
+      .angle-divider h2 {
+        font-size: 2.4rem;
+        width: 70%;
+        padding-bottom: 5.5rem; } }
+  .angle-divider__svg {
+    width: 100%;
+    max-width: 200rem;
+    position: absolute;
+    top: 10.5rem;
+    z-index: 3; }
+    @media only screen and (min-width: 56.25em) {
+      .angle-divider__svg {
+        top: 16.5rem; } }
+    @media only screen and (min-width: 75em) {
+      .angle-divider__svg {
+        top: 15.5rem; } }
+    @media only screen and (min-width: 112.5em) {
+      .angle-divider__svg {
+        top: 11.5rem; } }

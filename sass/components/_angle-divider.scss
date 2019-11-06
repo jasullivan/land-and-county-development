@@ -1,0 +1,45 @@
+.angle-divider {
+    min-height: 225px;
+    position: relative;
+    opacity: 0.85;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url(../imgs/background-house2.jpg);   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include respond(tab-port) {
+        min-height: 300px;
+    }
+    h2 {
+        font-size: 1.8rem;
+        width: 90%;
+        font-weight: normal;
+        color: $color-black;
+        text-align: center;
+        padding-bottom: 3rem;
+        @include respond(tab-port) {
+            font-size: 2.4rem;
+            width: 70%;
+            padding-bottom: 5.5rem;
+        }
+    } 
+    &__svg {
+        width: 100%;
+        max-width: 200rem;
+        position: absolute;
+        top: 10.5rem;
+        @include respond(tab-port) {
+            top: 16.5rem;
+        }
+        @include respond(tab-land) {
+            top: 15.5rem;
+        }
+         @include respond(desktop) {
+            top: 11.5rem;
+        }
+        z-index: 3;
+    }
+}

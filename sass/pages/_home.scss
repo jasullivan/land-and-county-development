@@ -1,10 +1,1 @@
 
-.angle-svg {
-    width: 100%;
-    position: absolute;
-    top: 14.2rem;
-    @include respond(tab-port) {
-        top: 21.2rem;
-    }
-    z-index: 3;
-}

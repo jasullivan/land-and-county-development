@@ -6,6 +6,7 @@ const logo = document.querySelector(".logo-box");
 const sticky = navbar.offsetTop + 100;
 const button = document.querySelector(".menu-button");
 const wrap = document.querySelector(".wrap");
+const body = document.querySelector('body');
 
 function stickyNav() {
     if (window.pageYOffset > 0 && window.pageYOffset < 300) {
@@ -21,22 +22,23 @@ function stickyNav() {
 }
 
 button.addEventListener('click', e => {
-    console.log(this)
+    // console.log(this)
     e.target.classList.toggle("menu-button__hamburger--open");
     navbar.classList.toggle("show-menu");
+    body.classList.toggle('is-open');
 })
 
 document.addEventListener("DOMContentLoaded", function(e) {
-    if (window.innerWidth > 1200) {
+    if (window.innerWidth > 900) {
         navbar.classList.remove("show-menu");
         button.classList.remove('menu-button__hamburger--open');
         navbar.classList.remove("navigation__offsite-container");
     } else {
       navbar.classList.add("navigation__offsite-container");
-      $('body').css({'overflow':'hidden'})
+      $('body').css({'overflow':'hidden'});
     }
     function resize() {
-        if (window.innerWidth > 1200) {
+        if (window.innerWidth > 900) {
             navbar.classList.remove("show-menu");
             button.classList.remove('menu-button__hamburger--open');
             navbar.classList.remove("navigation__offsite-container");
