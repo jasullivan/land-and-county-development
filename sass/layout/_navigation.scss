@@ -1,7 +1,7 @@
 body.is-open {
     height: 100vh;
     overflow-y: hidden;
-    position: fixed;
+    position:fixed;
 }
 .wrap {
     height: 10rem;
@@ -95,6 +95,7 @@ body.is-open {
     z-index: 1;
     right: -100vw;
     &__offsite-container {
+        position: fixed;
         transition: transform 0.3s ease-out;
     }
     @include respond(tab-port) {

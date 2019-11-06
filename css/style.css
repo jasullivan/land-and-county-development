@@ -243,7 +243,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  transition: all 1s; }
+  transition: all 900s; }
   .header__text-box {
     position: absolute;
     /* these absolute measurements are based on the parent */
@@ -343,6 +343,7 @@ body.is-open {
   z-index: 1;
   right: -100vw; }
   .navigation__offsite-container {
+    position: fixed;
     transition: transform 0.3s ease-out; }
   @media only screen and (min-width: 56.25em) {
     .navigation {
