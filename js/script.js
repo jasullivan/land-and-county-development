@@ -3,16 +3,18 @@ window.onscroll = function () { stickyNav() };
 
 const navBar = document.querySelector(".navigation");
 const logo = document.querySelector(".nav-icons__logo"); 
-const sticky = navBar.offsetTop + 100;
+// const sticky = navBar.offsetTop + 100;
+const featuredProperties = document.getElementById('featuredProperties');
+var sticky = featuredProperties.offsetTop - 100;
 const navMenu = document.querySelector(".nav-icons__menu");
 const navWrap = document.querySelector(".nav-wrap");
 const body = document.querySelector('body');
 
 function stickyNav() {
-    if (window.pageYOffset > 0 && window.pageYOffset < 300) {
+    if (window.pageYOffset > 0 && window.pageYOffset < sticky) {
         navWrap.classList.add("pre-sticky"); 
     }
-    else if (window.pageYOffset >= 300) {
+    else if (window.pageYOffset >= sticky) {
         // navWrap.classList.remove("pre-sticky");
         navWrap.classList.add("sticky");
     } else {

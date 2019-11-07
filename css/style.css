@@ -260,7 +260,7 @@ body.is-open {
   position: fixed; }
 
 .nav-wrap {
-  height: 10rem;
+  height: 8rem;
   position: absolute;
   width: 100%; }
 
@@ -269,7 +269,7 @@ body.is-open {
   top: 0;
   z-index: 2;
   width: 100%;
-  height: 9rem;
+  height: 8rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -334,47 +334,38 @@ body.is-open {
   color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  position: fixed;
   top: 0;
   bottom: 0;
   width: 100vw;
   background: #000;
   z-index: 1;
-  right: -100vw; }
+  right: -100vw;
+  font-size: 3.5rem; }
   .navigation__offsite-container {
     position: fixed;
     transition: transform 0.3s ease-out; }
   @media only screen and (min-width: 56.25em) {
     .navigation {
       position: absolute;
-      height: 10rem;
+      height: 8rem;
       width: 56rem;
+      font-size: 2rem;
       background: none;
       right: 0;
       animation: moveInTop 0.5s ease-out; } }
-  .navigation__main {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: absolute;
-    font-size: 3.5rem; }
+  .navigation ul {
+    text-align: center;
+    width: 100vw; }
     @media only screen and (min-width: 56.25em) {
-      .navigation__main {
-        display: inline-block;
-        top: 3.1rem;
-        right: 4rem;
-        font-size: 2rem; } }
-    .navigation__main ul {
-      text-align: center;
-      width: 100vw; }
-      @media only screen and (min-width: 56.25em) {
-        .navigation__main ul {
-          width: 100%; } }
-      @media only screen and (min-width: 56.25em) {
-        .navigation__main ul li {
-          float: left;
-          margin-right: 2rem; } }
+      .navigation ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 3rem; } }
+    @media only screen and (min-width: 56.25em) {
+      .navigation ul li {
+        float: left;
+        margin-right: 2rem; } }
   .navigation__link:hover:after {
     border-color: #3ab54a;
     right: 0; }
@@ -400,7 +391,7 @@ body.is-open {
 @media only screen and (min-width: 56.25em) {
   .pre-sticky {
     position: fixed;
-    height: 10rem;
+    height: 8rem;
     width: 100%;
     z-index: 1;
     background: rgba(0, 0, 0, 0.7);
