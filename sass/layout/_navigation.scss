@@ -3,20 +3,20 @@ body.is-open {
     overflow-y: hidden;
     position:fixed;
 }
-.wrap {
+.nav-wrap {
     height: 10rem;
     position: absolute;
     width: 100%;
 }
-.logo-box {
+.nav-icons {
     position: fixed;
     top: 0;
+    z-index: 2;
     width: 100%;
+    height: 9rem;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    z-index: 2;
-    height: 10rem;
     background: $nav-scroll-background;
     animation: moveInTop 0.5s ease-out;
     @include respond(tab-port) {
@@ -26,17 +26,14 @@ body.is-open {
     }
     &__logo {
         /* browser will identify the correct measurement for the remaining dimension */
-        height: 5.5rem;
+        height: 5rem;
         backface-visibility: hidden;
         position: relative;
         left: 4rem;
     }
-    .menu-button {
-        // color: white;
-        // display: block;
+    &__menu {
         position: absolute;
         right: 4rem;
-        // margin: 0 1em 1em;
         width: 40px;
         @include respond(tab-port) {
             display: none;
@@ -53,7 +50,7 @@ body.is-open {
             margin: 7px 0;
             transition: all .2s ease-in-out;
         }
-        &__hamburger {
+        &-center {
             background-color: #fff;
             border-radius: 3px;
             content: '';
@@ -62,18 +59,18 @@ body.is-open {
             margin: 7px 0;
             transition: all .2s ease-in-out;
         }
-        &__hamburger--open {
+        &--open {
             &:before {
                 -webkit-transform: translateY(12px) rotate(135deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
                 -ms-transform: translateY(12px) rotate(135deg); /* IE 9 */
                 transform: translateY(12px) rotate(135deg);
-        }
+            }
             &:after {
                 -webkit-transform: translateY(-12px) rotate(-135deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
                 -ms-transform: translateY(-12px) rotate(-135deg); /* IE 9 */
                 transform: translateY(-12px) rotate(-135deg);
-        }
-            & .menu-button__hamburger {
+            }
+            & .nav-icons__menu-center {
                 -webkit-transform: scale(0); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
                 -ms-transform: scale(0); /* IE 9 */
                 transform: scale(0);

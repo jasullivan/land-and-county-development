@@ -1,49 +1,50 @@
 // sticky nav and mob menu
 window.onscroll = function () { stickyNav() };
 
-const navbar = document.querySelector(".navigation");
-const logo = document.querySelector(".logo-box"); 
-const sticky = navbar.offsetTop + 100;
-const button = document.querySelector(".menu-button");
-const wrap = document.querySelector(".wrap");
+const navBar = document.querySelector(".navigation");
+const logo = document.querySelector(".nav-icons__logo"); 
+const sticky = navBar.offsetTop + 100;
+const navMenu = document.querySelector(".nav-icons__menu");
+const navWrap = document.querySelector(".nav-wrap");
 const body = document.querySelector('body');
 
 function stickyNav() {
     if (window.pageYOffset > 0 && window.pageYOffset < 300) {
-        wrap.classList.add("pre-sticky"); 
+        navWrap.classList.add("pre-sticky"); 
     }
     else if (window.pageYOffset >= 300) {
-        // wrap.classList.remove("pre-sticky");
-        wrap.classList.add("sticky");
+        // navWrap.classList.remove("pre-sticky");
+        navWrap.classList.add("sticky");
     } else {
-        wrap.classList.remove("sticky");
-        wrap.classList.remove("pre-sticky");
+        navWrap.classList.remove("sticky");
+        navWrap.classList.remove("pre-sticky");
     }
 }
 
-button.addEventListener('click', e => {
-    // console.log(this)
-    e.target.classList.toggle("menu-button__hamburger--open");
-    navbar.classList.toggle("show-menu");
+navMenu.addEventListener('click', function() {
+    this.classList.toggle("nav-icons__menu--open");
+    navBar.classList.toggle("show-menu");
     body.classList.toggle('is-open');
 })
 
 document.addEventListener("DOMContentLoaded", function(e) {
     if (window.innerWidth > 900) {
-        navbar.classList.remove("show-menu");
-        button.classList.remove('menu-button__hamburger--open');
-        navbar.classList.remove("navigation__offsite-container");
+        navBar.classList.remove("show-menu");
+        navMenu.classList.remove('nav-icons__menu--open');
+        navBar.classList.remove("navigation__offsite-container");
+        body.classList.remove('is-open');
     } else {
-      navbar.classList.add("navigation__offsite-container");
+      navBar.classList.add("navigation__offsite-container");
       $('body').css({'overflow':'hidden'});
     }
     function resize() {
         if (window.innerWidth > 900) {
-            navbar.classList.remove("show-menu");
-            button.classList.remove('menu-button__hamburger--open');
-            navbar.classList.remove("navigation__offsite-container");
+            navBar.classList.remove("show-menu");
+            navMenu.classList.remove('nav-icons__menu--open');
+            navBar.classList.remove("navigation__offsite-container");
+            body.classList.remove('is-open');
         } else {
-            navbar.classList.add("navigation__offsite-container");
+            navBar.classList.add("navigation__offsite-container");
         }
     }
     window.onresize = resize;

@@ -259,43 +259,43 @@ body.is-open {
   overflow-y: hidden;
   position: fixed; }
 
-.wrap {
+.nav-wrap {
   height: 10rem;
   position: absolute;
   width: 100%; }
 
-.logo-box {
+.nav-icons {
   position: fixed;
   top: 0;
+  z-index: 2;
   width: 100%;
+  height: 9rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  z-index: 2;
-  height: 10rem;
   background: rgba(0, 0, 0, 0.7);
   animation: moveInTop 0.5s ease-out; }
   @media only screen and (min-width: 56.25em) {
-    .logo-box {
+    .nav-icons {
       background: none;
       position: absolute;
       width: 20rem; } }
-  .logo-box__logo {
+  .nav-icons__logo {
     /* browser will identify the correct measurement for the remaining dimension */
-    height: 5.5rem;
+    height: 5rem;
     backface-visibility: hidden;
     position: relative;
     left: 4rem; }
-  .logo-box .menu-button {
+  .nav-icons__menu {
     position: absolute;
     right: 4rem;
     width: 40px; }
     @media only screen and (min-width: 56.25em) {
-      .logo-box .menu-button {
+      .nav-icons__menu {
         display: none; } }
-    .logo-box .menu-button:hover {
+    .nav-icons__menu:hover {
       cursor: pointer; }
-    .logo-box .menu-button:after, .logo-box .menu-button:before {
+    .nav-icons__menu:after, .nav-icons__menu:before {
       background-color: #fff;
       border-radius: 3px;
       content: '';
@@ -303,7 +303,7 @@ body.is-open {
       height: 5px;
       margin: 7px 0;
       transition: all .2s ease-in-out; }
-    .logo-box .menu-button__hamburger {
+    .nav-icons__menu-center {
       background-color: #fff;
       border-radius: 3px;
       content: '';
@@ -311,19 +311,19 @@ body.is-open {
       height: 5px;
       margin: 7px 0;
       transition: all .2s ease-in-out; }
-    .logo-box .menu-button__hamburger--open:before {
+    .nav-icons__menu--open:before {
       -webkit-transform: translateY(12px) rotate(135deg);
       /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
       -ms-transform: translateY(12px) rotate(135deg);
       /* IE 9 */
       transform: translateY(12px) rotate(135deg); }
-    .logo-box .menu-button__hamburger--open:after {
+    .nav-icons__menu--open:after {
       -webkit-transform: translateY(-12px) rotate(-135deg);
       /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
       -ms-transform: translateY(-12px) rotate(-135deg);
       /* IE 9 */
       transform: translateY(-12px) rotate(-135deg); }
-    .logo-box .menu-button__hamburger--open .menu-button__hamburger {
+    .nav-icons__menu--open .nav-icons__menu-center {
       -webkit-transform: scale(0);
       /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
       -ms-transform: scale(0);
