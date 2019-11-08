@@ -5,13 +5,13 @@ const navBar = document.querySelector(".navigation");
 const logo = document.querySelector(".nav-icons__logo"); 
 // const sticky = navBar.offsetTop + 100;
 const featuredProperties = document.getElementById('featuredProperties');
-var sticky = featuredProperties.offsetTop - 100;
+var sticky = featuredProperties.offsetTop - 150;
 const navMenu = document.querySelector(".nav-icons__menu");
 const navWrap = document.querySelector(".nav-wrap");
 const body = document.querySelector('body');
 
 function stickyNav() {
-    if (window.pageYOffset > 0 && window.pageYOffset < sticky) {
+    if (window.pageYOffset > 100 && window.pageYOffset < sticky) {
         navWrap.classList.add("pre-sticky"); 
     }
     else if (window.pageYOffset >= sticky) {
