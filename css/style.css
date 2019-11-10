@@ -241,7 +241,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  transition: all 900s; }
+  transition: all 0.5s; }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -251,11 +251,63 @@ body {
     width: 75%; }
     @media only screen and (min-width: 56.25em) {
       .header__text-box {
-        width: 100%;
+        width: initial;
         top: 35%;
         left: 4rem;
         -webkit-transform: translate(0%, 0%);
         transform: translate(0%, 0%); } }
+
+.footer {
+  background-color: black;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: #777; }
+  @media only screen and (min-width: 56.25em) {
+    .footer {
+      padding: 8rem 0; } }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 8rem; }
+    @media only screen and (min-width: 56.25em) {
+      .footer__logo-box {
+        margin-bottom: 6rem; } }
+  .footer__logo {
+    width: 8rem;
+    height: auto; }
+  .footer__navigation {
+    border-top: 1px solid #777;
+    padding-top: 2rem;
+    display: inline-block; }
+    @media only screen and (min-width: 56.25em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #777;
+    background-color: #777;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .2s; }
+  .footer__link:hover, .footer__link:active {
+    color: #55c57a;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(5deg) scale(1.3); }
+  .footer__copyright {
+    border-top: 1px solid #777;
+    padding-top: 2rem;
+    width: 80%;
+    float: right; }
+    @media only screen and (min-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        float: none; } }
 
 body.is-open {
   height: 100vh;
@@ -291,7 +343,7 @@ body.is-open {
     left: 4rem; }
   .nav-icons__menu {
     position: absolute;
-    right: 4rem;
+    right: 5rem;
     width: 40px; }
     @media only screen and (min-width: 56.25em) {
       .nav-icons__menu {
@@ -346,7 +398,7 @@ body.is-open {
   font-size: 3.5rem; }
   .navigation__offsite-container {
     position: fixed;
-    transition: transform 0.3s ease-out; }
+    transition: transform 0.2s ease-out; }
   @media only screen and (min-width: 56.25em) {
     .navigation {
       position: absolute;

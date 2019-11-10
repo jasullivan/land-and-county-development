@@ -7,7 +7,7 @@
     background-repeat:no-repeat;
     background-size:cover;
     color: $color-white;
-    transition: all 900s;
+    transition: all 0.5s;
     &__text-box {
         position: absolute;
         top: 50%;
@@ -16,7 +16,7 @@
         transform: translate(-50%, -50%);
         width: 75%;
         @include respond(tab-port) {
-            width: 100%;
+            width: initial;
             top: 35%;
             left: 4rem;
             -webkit-transform: translate(0%, 0%);

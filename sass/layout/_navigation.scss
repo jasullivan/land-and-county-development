@@ -33,7 +33,7 @@ body.is-open {
     }
     &__menu {
         position: absolute;
-        right: 4rem;
+        right: 5rem;
         width: 40px;
         @include respond(tab-port) {
             display: none;
@@ -93,7 +93,7 @@ body.is-open {
     font-size: 3.5rem;
     &__offsite-container {
         position: fixed;
-        transition: transform 0.3s ease-out;
+        transition: transform 0.2s ease-out;
     }
     @include respond(tab-port) {
         position: absolute;
