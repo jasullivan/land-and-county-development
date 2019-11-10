@@ -1,16 +1,12 @@
 body {
-    /* set in body so can use inheritance */
     font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    /* font-size: 16px; */
     color: $color-dark-grey;
-    // padding: 3rem;
 }
 
     
 .heading-primary {
-    // text-transform: uppercase;
     /* occasionally get wobble on animation. not known why but this is fixes it, */
     /* this hides the back part of an element when we transform it */
     backface-visibility: hidden;
@@ -18,18 +14,14 @@ body {
     &--main {
         display: block;
         font-size: 4rem;
-        @include respond(tab-port) {
-            font-size: 8rem;
-        }
         line-height: normal;
         font-weight: 400;
-        // letter-spacing: 3.5rem;
-        /* animation: moveInLeft 5s infinite; */
         animation-name: moveInBottom;
         animation-duration: 1s;
         animation-timing-function: ease-out;
-        /* animation-delay: 3s
-        animation-iteration-count: 3; */
+        @include respond(tab-port) {
+            font-size: 8rem;
+        }
     }
     &--sub {
         display: block;
@@ -39,28 +31,16 @@ body {
         }
         line-height: normal;
         font-weight: 400;
-        // letter-spacing: 1.75rem;
         animation: moveInBottom 1s ease-out;
     }
 }
 .heading-secondary {
     font-size: 3.5rem;
-    // text-transform: uppercase;
     font-weight: 700;
     display: inline-block;
     color: $color-dark-grey;
-    // background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    // -webkit-background-clip: text;
-    // background-clip: text;
-    // color: transparent;
     letter-spacing: 2px;
     line-height: normal;
-    // transition: all .2s;
-    // &:hover {
-    //     transform: skewY(2deg) skewX(15deg) scale(1.1);
-    //     cursor: pointer;
-    //     text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
-    // }
     &--border-bottom {
         position: relative;
         &:after {
@@ -74,21 +54,17 @@ body {
             left: 0;
             right: 140px;
         }
-    }
-    
+    }   
 }
 .heading-tertiary {
     font-size: 2.5rem;
     font-weight: 700;
-    // padding-bottom: 0.5rem;
-    // text-transform: uppercase;
     color:$color-dark-grey;
 }
 .heading-quaternary {
     font-size: 2rem;
     font-weight: 700;
     padding-bottom: 0.5rem;
-    // text-transform: uppercase;
     color: $color-grey;
 }
 .heading-paragraph {
@@ -101,9 +77,12 @@ body {
         margin-bottom: 1.6rem;
     }
     @include respond(tab-port) {
-        width: 40%;
+        width: 70%;
         font-size: 2.2rem;
         line-height: 2.8rem;
+    }
+    @include respond(tab-land) {
+        width: 40%;
     }
 }
 .paragraph {

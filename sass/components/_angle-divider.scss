@@ -2,7 +2,7 @@
     min-height: 225px;
     position: relative;
     opacity: 0.85;
-    background-attachment: fixed;
+    background-attachment: initial;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,8 +10,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+
+    // min-height: 225px;
+    // position: relative;
+    // opacity: 0.85;
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-image:url(../imgs/background-house2.jpg);   
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    
+    
+    // -webkit-overflow-scrolling:touch;
+    // position:sticky;
     @include respond(tab-port) {
+        // min-height: 300px;
+    }
+    @include respond(tab-land) {
         min-height: 300px;
+        background-attachment: fixed;
     }
     h2 {
         font-size: 1.8rem;
@@ -32,7 +53,7 @@
         position: absolute;
         top: 10.5rem;
         @include respond(tab-port) {
-            top: 16.5rem;
+            top: 8.5rem;
         }
         @include respond(tab-land) {
             top: 15.5rem;
