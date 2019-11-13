@@ -1,0 +1,107 @@
+// .header {
+//     height: 100vh;
+//     position: relative;
+//     background-attachment: scroll;
+//     background-position: top;
+//     background-image:url(../imgs/hero_img_01.jpg);
+//     background-repeat:no-repeat;
+//     background-size:cover;
+//     color: $color-white;
+//     transition: all 0.5s;
+//     &__text-box {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         -webkit-transform: translate(-50%, -50%);
+//         transform: translate(-50%, -50%);
+//         width: 75%;
+//         @include respond(tab-port) {
+//             width: initial;
+//             top: 35%;
+//             left: 4rem;
+//             -webkit-transform: translate(0%, 0%);
+//             transform: translate(0%, 0%);
+//         }
+//     }
+// }
+.portfolio {
+    // background: red;
+    padding: 10rem 0rem 10rem;
+    // height: 100vh;
+    &__item-info {
+        // -ms-box-orient: horizontal;
+        // display: -webkit-box;
+        // display: -moz-box;
+        // display: -ms-flexbox;
+        // display: -moz-flex;
+        // display: -webkit-flex;
+        // height: inherit;
+        display: inherit;
+        flex-direction: column;
+    }
+    &__pics {
+        flex: 1;
+    }
+    &__links {
+        -webkit-align-items: flex-start;
+        align-items: flex-start; 
+    }
+    &__link {
+        font-size: 2.5rem;
+        font-weight: 700;
+        display: inline-block;
+        color: $color-dark-grey;
+        letter-spacing: 1px;
+        line-height: 4rem;
+        &--grey {
+            color: grey;
+            transition: all 0.5s;
+        }
+        &--border-bottom {
+            position: relative;
+            &:after {
+                border-color: #3ab54a;
+                border-radius: 1em;
+                border-top: 0.1em solid #3ab54a;
+                content: "";
+                position: absolute;
+                right: 100%;
+                bottom: -14px;
+                left: 0;
+                right: 140px;
+            }
+        }
+        &:hover:after {
+            border-color: $link-hover-color;
+            right: 0;
+        }
+        &:after {
+            border-radius: 1em;
+            border-top: .1em solid $link-hover-color;
+            content: "";
+            position: absolute;
+            right: 100%;
+            bottom: .14em;
+            left: 0;
+            transition: right 0.25s cubic-bezier(0,.5,0,1), border-color 0.25s ease-out;
+        }
+        &:hover:after {
+            right: 0;
+        }
+
+    }
+    &__description {
+        display: inherit;
+        flex: 1;
+        -webkit-align-items: flex-end;
+        align-items: flex-end; 
+        padding-bottom: 3rem;
+        transition: all 0.5s;
+        &--hide {
+            display:none;
+        }
+    }
+    img {
+        width: 100%;
+    }
+}

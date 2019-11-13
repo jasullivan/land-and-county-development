@@ -4,7 +4,11 @@
     @include respond(tab-port) {
         max-width: 50rem;
     }
-
+    &--flex {
+        @include respond(tab-port) {
+            display: flex;
+        }
+    }
     &:not(:last-child) {
         margin-bottom: $gutter-vertical-small;
 
@@ -46,6 +50,11 @@
         }
         @include respond(tab-port) {
             float: left;
+        }
+        &--flex {
+            @include respond(tab-port) {
+                display: flex;
+            }
         }
     }
 

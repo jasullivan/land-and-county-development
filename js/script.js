@@ -4,8 +4,8 @@ window.onscroll = function () { stickyNav() };
 const navBar = document.querySelector(".navigation");
 const logo = document.querySelector(".nav-icons__logo"); 
 // const sticky = navBar.offsetTop + 100;
-const featuredProperties = document.getElementById('featuredProperties');
-var sticky = featuredProperties.offsetTop - 150;
+const navScrollMarker = document.getElementById('navScrollMarker');
+var sticky = navScrollMarker.offsetTop - 150;
 const navMenu = document.querySelector(".nav-icons__menu");
 const navWrap = document.querySelector(".nav-wrap");
 const body = document.querySelector('body');
@@ -13,6 +13,7 @@ const body = document.querySelector('body');
 function stickyNav() {
     if (window.pageYOffset > 100 && window.pageYOffset < sticky) {
         navWrap.classList.add("pre-sticky"); 
+        navWrap.classList.remove("sticky");
     }
     else if (window.pageYOffset >= sticky) {
         // navWrap.classList.remove("pre-sticky");
