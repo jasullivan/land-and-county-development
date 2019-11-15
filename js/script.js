@@ -38,7 +38,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
         body.classList.remove('is-open');
     } else {
       navBar.classList.add("navigation__offsite-container");
+
+        // is this needed?
       $('body').css({'overflow':'hidden'});
+
+
     }
     function resize() {
         if (window.innerWidth > 900) {
@@ -54,14 +58,56 @@ document.addEventListener("DOMContentLoaded", function(e) {
 });
 // sticky nav and mob menu ends
 
-
-// function openNav() {
-//     document.getElementById("mySidenav").style.height = "100vh";
+// portfolio accordion
+// var acc = document.getElementsByClassName("portfolio__link");
+// var i;
+// for (i = 0; i < acc.length; i++) {
+//     acc[i].addEventListener("click", function () {
+//         this.classList.toggle("active");
+//         var panel = this.nextElementSibling;
+//         if (panel.style.maxHeight) {
+//             panel.style.maxHeight = null;
+//         } else {
+//             panel.style.maxHeight = panel.scrollHeight + "px";
+//         }
+//     });
 // }
 
-// function closeNav() {
-//     document.getElementById("mySidenav").style.height = "0";
+
+// function myFunction(imgs) {
+//     var expandImg = document.getElementById("expandedImg");
+    // var imgText = document.getElementById("imgtext");
+    // imgText.innerHTML = imgs.alt;
+//     expandImg.parentElement.style.display = "block";
+//     console.log(imgs);
+//     if(imgs.classList.contains('portfolio__one')) {
+//         expandImg.src = "imgs/portfolio_harwood1a.jpg";
+//     } else if (imgs.classList.contains('portfolio__two')) {
+//         expandImg.src = "imgs/portfolio_clavering1a.jpg";
+//     } else {
+//         expandImg.src = "imgs/portfolio_hilltop1a.jpg";
+//     }
 // }
+
+var hoverPics = document.getElementsByClassName("portfolio__link");
+for (var i = 0; i < hoverPics.length; i++) {
+    hoverPics[i].addEventListener("mouseover", function (e) {
+        var expandImg = document.getElementById("expandedImg");
+        // var imgText = document.getElementById("imgtext");
+        // imgText.innerHTML = imgs.alt;
+        // expandImg.parentElement.style.display = "block";
+        // expandImg.parentElement.style.opacity = "1";
+        // expandImg.src = "imgs/portfolio_harwood1a.jpg";
+        console.log(expandImg);
+        if (this.classList.contains('portfolio__one')) {
+            expandImg.src = "imgs/portfolio_harwood1a.jpg";
+        } else if (this.classList.contains('portfolio__two')) {
+            expandImg.src = "imgs/portfolio_clavering1a.jpg";
+        } else {
+            expandImg.src = "imgs/portfolio_hilltop1a.jpg";
+        }
+    })
+}
 
 
 

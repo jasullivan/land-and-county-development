@@ -24,6 +24,9 @@
 //         }
 //     }
 // }
+.panel {
+    margin-bottom: 3rem;
+}
 .portfolio {
     // background: red;
     padding: 10rem 0rem 10rem;
@@ -43,8 +46,13 @@
         flex: 1;
     }
     &__links {
-        -webkit-align-items: flex-start;
-        align-items: flex-start; 
+        display: flex;
+        justify-content: left;
+        @include respond(tab-port) {
+            display: block;
+            -webkit-align-items: flex-start;
+            align-items: flex-start; 
+        }
     }
     &__link {
         font-size: 2.5rem;
@@ -53,6 +61,14 @@
         color: $color-dark-grey;
         letter-spacing: 1px;
         line-height: 4rem;
+        margin: 0 2rem;
+        cursor: pointer;
+        &:first-of-type {
+            margin: 0 2rem 0 0;
+        }
+        @include respond(tab-port) {
+            margin: 0;
+        }
         &--grey {
             color: grey;
             transition: all 0.5s;
@@ -88,20 +104,31 @@
         &:hover:after {
             right: 0;
         }
-
     }
-    &__description {
+    &__pics {
+        position: relative;
+    }
+    &__pic {
         display: inherit;
         flex: 1;
         -webkit-align-items: flex-end;
         align-items: flex-end; 
-        padding-bottom: 3rem;
-        transition: all 0.5s;
-        &--hide {
-            display:none;
+        // // padding-bottom: 3rem;
+        // max-height: 0;
+        // overflow: hidden;
+        // transition: max-height 0.3s ease-out;
+
+    }
+    /* The expanding image container */
+    .container {
+      position: relative;
+      display: block;
+      img {
+        width: 100%;
+        transition: opacity 1s ease-in-out;
         }
     }
-    img {
-        width: 100%;
-    }
+    // #expanded {
+    //     width:100%;
+    // }
 }
