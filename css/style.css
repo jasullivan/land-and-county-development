@@ -181,6 +181,11 @@ body {
     @media only screen and (min-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
+  .row.small-grid:not(:last-child) {
+    margin-bottom: 1rem; }
+    @media only screen and (min-width: 56.25em) {
+      .row.small-grid:not(:last-child) {
+        margin-bottom: 1rem; } }
   @media only screen and (min-width: 56.25em) {
     .row {
       max-width: 140rem;
@@ -196,6 +201,9 @@ body {
       .row .col-direction__normal:not(:last-child) {
         margin-right: 6rem; } }
   @media only screen and (min-width: 56.25em) {
+    .row .col-direction__normal.small-grid:not(:last-child) {
+      margin-right: 2rem; } }
+  @media only screen and (min-width: 56.25em) {
     .row .col-direction__normal {
       float: left; } }
   @media only screen and (min-width: 56.25em) {
@@ -207,6 +215,9 @@ body {
   @media only screen and (min-width: 56.25em) {
     .row .col-direction__reversed:last-child {
       margin-right: 6rem; } }
+  @media only screen and (min-width: 56.25em) {
+    .row .col-direction__reversed.small-grid:last-child {
+      margin-right: 2rem; } }
   @media only screen and (min-width: 56.25em) {
     .row .col-direction__reversed {
       float: right; } }
@@ -220,26 +231,41 @@ body {
     @media only screen and (min-width: 56.25em) {
       .row .col-1-of-3 {
         width: calc((100% - 2 * 6rem) / 3); } }
+    @media only screen and (min-width: 56.25em) {
+      .row .col-1-of-3.small-grid {
+        width: calc((100% - 2 * 2rem) / 3); } }
   .row .col-2-of-3 {
     width: 100%; }
     @media only screen and (min-width: 56.25em) {
       .row .col-2-of-3 {
         width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); } }
+    @media only screen and (min-width: 56.25em) {
+      .row .col-2-of-3.small-grid {
+        width: calc(2 * ((100% - 2 * 2rem) / 3) + 2rem); } }
   .row .col-1-of-4 {
     width: 100%; }
     @media only screen and (min-width: 56.25em) {
       .row .col-1-of-4 {
         width: calc((100% - 3 * 6rem) / 4); } }
+    @media only screen and (min-width: 56.25em) {
+      .row .col-1-of-4.small-grid {
+        width: calc((100% - 3 * 2rem) / 4); } }
   .row .col-2-of-4 {
     width: 100%; }
     @media only screen and (min-width: 56.25em) {
       .row .col-2-of-4 {
         width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); } }
+    @media only screen and (min-width: 56.25em) {
+      .row .col-2-of-4.small-grid {
+        width: calc(2 * ((100% - 3 * 2rem) / 4) + 2rem); } }
   .row .col-3-of-4 {
     width: 100%; }
     @media only screen and (min-width: 56.25em) {
       .row .col-3-of-4 {
         width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); } }
+    @media only screen and (min-width: 56.25em) {
+      .row .col-3-of-4.small-grid {
+        width: calc(3 * ((100% - 3 * 2rem) / 4) + 2 * 2rem); } }
 
 .header {
   height: 100vh;
@@ -468,6 +494,15 @@ body.is-open {
   .sticky {
     transform: translateY(10rem); } }
 
+.section-development {
+  padding: 4rem 0 4rem;
+  width: 80%;
+  margin: 0 auto; }
+
+.test {
+  background: salmon;
+  padding: 20px; }
+
 .section-property {
   padding: 4rem 0 4rem; }
   .section-property img {
@@ -523,6 +558,8 @@ body.is-open {
 .portfolio {
   padding: 10rem 0rem 10rem;
   /* The expanding image container */ }
+  .portfolio.no-padding-bottom {
+    padding: 10rem 0rem 0rem; }
   .portfolio__item-info {
     display: inherit;
     flex-direction: column; }
@@ -592,3 +629,21 @@ body.is-open {
     .portfolio .container img {
       width: 100%;
       transition: opacity 1s ease-in-out; }
+
+.portfolio-development {
+  position: relative;
+  top: 5rem;
+  height: 40rem;
+  background-attachment: scroll;
+  background-position: top;
+  background-image: url(../imgs/hero_narrow_img_01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  transition: all 0.5s; }
+  .portfolio-development__property-grid {
+    position: relative;
+    top: 7rem; }
+  .portfolio-development__footer {
+    position: relative;
+    top: 8rem; }
