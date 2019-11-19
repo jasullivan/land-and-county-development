@@ -2,31 +2,44 @@
     position: relative;
     top: 5rem;
     // &__header {
-        height: 40rem;
-        // background: tomato;
-        background-attachment: scroll;
-        background-position: top;
-        background-image:url(../imgs/hero_narrow_img_01.jpg);
-        background-repeat:no-repeat;
-        background-size:cover;
-        color: $color-white;
-        transition: all 0.5s;
-        // &__text-box {
-        //     position: absolute;
-        //     top: 50%;
-        //     left: 50%;
-        //     -webkit-transform: translate(-50%, -50%);
-        //     transform: translate(-50%, -50%);
-        //     width: 75%;
-        //     @include respond(tab-port) {
-        //         width: initial;
-        //         top: 35%;
-        //         left: 4rem;
-        //         -webkit-transform: translate(0%, 0%);
-        //         transform: translate(0%, 0%);
-        //     }
-        // }
-    // }
+    height: 40rem;
+    // background: tomato;
+    background-attachment: scroll;
+    background-position: top;
+    background-image:url(../imgs/hero_narrow_img_01.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    color: $color-white;
+    transition: all 0.5s;
+    &__text-box {
+        width: 80%;
+        position: absolute;
+        bottom: 5%;
+        left: 3rem;
+        // -webkit-transform: translate(-50%, -50%);
+        // transform: translate(-50%, -50%);
+            font-size: 2rem;
+        @include respond(tab-port) {
+            width: initial;
+            font-size: 3rem;
+            bottom: 5%;
+            left: 3rem;
+            -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+        }
+    }
+    &__item {
+        position: relative;
+        img {
+            position: relative;
+        }
+        .test {
+            position:absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+        }
+    }
     &__property-grid {
         position: relative;
         top: 7rem;
