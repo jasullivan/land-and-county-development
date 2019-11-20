@@ -89,24 +89,97 @@ document.addEventListener("DOMContentLoaded", function(e) {
 //     }
 // }
 
-var hoverPics = document.getElementsByClassName("portfolio__link");
-for (var i = 0; i < hoverPics.length; i++) {
-    hoverPics[i].addEventListener("mouseover", function (e) {
-        var expandImg = document.getElementById("expandedImg");
+
+// hover pics in portfolio
+// var hoverPics = document.getElementsByClassName("portfolio__link");
+// for (var i = 0; i < hoverPics.length; i++) {
+//     hoverPics[i].addEventListener("mouseover", function (e) {
+//         var expandImg = document.getElementById("expandedImg");
         // var imgText = document.getElementById("imgtext");
         // imgText.innerHTML = imgs.alt;
         // expandImg.parentElement.style.display = "block";
         // expandImg.parentElement.style.opacity = "1";
         // expandImg.src = "imgs/portfolio_harwood1a.jpg";
-        console.log(expandImg);
-        if (this.classList.contains('portfolio__one')) {
-            expandImg.src = "imgs/portfolio_harwood1a.jpg";
-        } else if (this.classList.contains('portfolio__two')) {
-            expandImg.src = "imgs/portfolio_clavering1a.jpg";
-        } else {
-            expandImg.src = "imgs/portfolio_hilltop1a.jpg";
-        }
-    })
+//         console.log(expandImg);
+//         if (this.classList.contains('portfolio__one')) {
+//             expandImg.src = "imgs/portfolio_harwood1a.jpg";
+//         } else if (this.classList.contains('portfolio__two')) {
+//             expandImg.src = "imgs/portfolio_clavering1a.jpg";
+//         } else {
+//             expandImg.src = "imgs/portfolio_hilltop1a.jpg";
+//         }
+//     })
+// }
+// hover pics in portfolio
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+    console.log(n)
+}
+// function plusSlides(n) {
+//     if(n = -1) {
+//         showSlides(slideIndex -= 1);
+//         console.log('-1')
+//     } else {
+//         showSlides(slideIndex += 1);
+//         console.log('1')
+//     }
+    
+// }
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    var imgs = document.getElementsByClassName("portfolio__link");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        slides[i].style.opacity = 0;
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndex - 1].style.opacity = 1;
+    dots[slideIndex - 1].className += " active";
+
+    if ((dots[0]).classList.contains('active')) {
+        imgs[0].classList.add("moveRight")
+        imgs[1].classList.remove("moveRight")
+        imgs[2].classList.remove("moveRight")
+    } else if ((dots[1]).classList.contains('active')) {
+        imgs[1].classList.add("moveRight")
+        imgs[0].classList.remove("moveRight")
+        imgs[2].classList.remove("moveRight")
+    } else {
+        imgs[2].classList.add("moveRight")
+        imgs[0].classList.remove("moveRight")
+        imgs[1].classList.remove("moveRight")
+    }
+    // if ((dots[0]).classList.contains('active')) {
+    //     imgs[0].style.color = "red"
+    //     imgs[1].style.color = "black"
+    //     imgs[2].style.color = "black"
+    // } else if ((dots[1]).classList.contains('active')) {
+    //     imgs[1].style.color = "red"
+    //     imgs[0].style.color = "black"
+    //     imgs[2].style.color = "black"
+    // } else {
+    //     imgs[2].style.color = "red"
+    //     imgs[0].style.color = "black"
+    //     imgs[1].style.color = "black"
+    // }
 }
 
 
