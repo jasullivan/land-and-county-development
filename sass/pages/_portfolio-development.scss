@@ -1,9 +1,7 @@
 .portfolio-development {
     position: relative;
     top: 5rem;
-    // &__header {
     height: 40rem;
-    // background: tomato;
     background-attachment: scroll;
     background-position: top;
     background-image:url(../imgs/hero_narrow_img_01.jpg);
@@ -33,11 +31,12 @@
         img {
             position: relative;
         }
-        .test {
+        h3 {
             position:absolute;
-            bottom: 10px;
-            left: 10px;
-            color: white;
+            bottom: 1rem;
+            left: 2rem;
+            font-size: 3rem;
+            color: $color-white;
         }
     }
     &__property-grid {

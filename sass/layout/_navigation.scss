@@ -7,6 +7,15 @@ body.is-open {
     height: 8rem;
     position: absolute;
     width: 100%;
+    color: $nav-font-color;
+    &--dark {
+        color: $color-white;
+        @include respond(tab-port) {
+       color: $nav-font-color-dark; 
+        }
+    }
+    // color: $color-white;
+    
 }
 .nav-icons {
     position: fixed;
@@ -79,7 +88,7 @@ body.is-open {
     }
 }
 .navigation {
-    color: $nav-font-color;
+    // color: $nav-font-color;
     display: flex;
     align-items: center;
     // justify-content: flex-end;
@@ -91,9 +100,6 @@ body.is-open {
     z-index: 1;
     right: -100vw;
     font-size: 3.5rem;
-    &--dark {
-       color: $nav-font-color-dark; 
-    }
     &__offsite-container {
         position: fixed;
         transition: transform 0.2s ease-out;
@@ -163,5 +169,6 @@ body.is-open {
 .sticky {
     @include respond(tab-port) {
         transform: translateY(10rem);
+        color: $color-white;
     }
 }
