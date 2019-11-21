@@ -4,16 +4,26 @@
     height: 40rem;
     background-attachment: scroll;
     background-position: top;
-    background-image:url(../imgs/hero_narrow_img_01.jpg);
+    
     background-repeat:no-repeat;
     background-size:cover;
     color: $color-white;
     transition: all 0.5s;
+    &__calvert {
+        background-image:url(../imgs/hero_narrow_img_01.jpg);
+    }
+    &__arkesden {
+        background-image:url(../imgs/hero_narrow_img_02.jpg);
+    }
+    &__hilltop {
+        background-image:url(../imgs/hero_narrow_img_03.jpg);
+    }
     &__text-box {
         width: 80%;
         position: absolute;
         bottom: 5%;
         left: 3rem;
+        line-height: normal;
         // -webkit-transform: translate(-50%, -50%);
         // transform: translate(-50%, -50%);
             font-size: 2rem;

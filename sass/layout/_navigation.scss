@@ -21,7 +21,16 @@ body.is-open {
     z-index: 2;
     width: 100%;
     height: 8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+
     align-items: center;
     justify-content: flex-start;
     background: $nav-scroll-background;
@@ -85,9 +94,14 @@ body.is-open {
         }
     }
 }
+
 .navigation {
     // color: $nav-font-color;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     // justify-content: flex-end;
     // position: fixed;
@@ -131,8 +145,9 @@ body.is-open {
     
     &__link:hover:after {
         border-color: $link-hover-color;
-        right: 0;
+        right: 15px;
     }
+    
 
     &__link:after {
         border-radius: 1em;
@@ -144,9 +159,19 @@ body.is-open {
         left: 0;
         transition: right 0.25s cubic-bezier(0,.5,0,1), border-color 0.25s ease-out;
     }
-    &__link:hover:after {
-        right: 0;
+    &__link {
+        &.chosen:after {
+            border-color: $link-hover-color;
+            right: 15px;
+            border-radius: 1em;
+            border-top: .1em solid $link-hover-color;
+            content: "";
+            position: absolute;
+            bottom: -0.1em;
+            left: 0;
+        }
     }
+        
 }
 .show-menu {
     -webkit-transform: translateX(-100vw); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */

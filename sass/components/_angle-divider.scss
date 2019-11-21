@@ -2,14 +2,13 @@
     min-height: 225px;
     position: relative;
     opacity: 0.85;
-    background-attachment: initial;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-image:url(../imgs/background-house2.jpg);   
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
+    
 
 
     // min-height: 225px;
@@ -36,14 +35,19 @@
     }
     h2 {
         font-size: 1.8rem;
-        width: 90%;
+        // width: 0%;
+        // max-width: 120rem;
         font-weight: normal;
         color: $color-black;
         text-align: center;
         padding-bottom: 3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         @include respond(tab-port) {
             font-size: 2.4rem;
-            width: 70%;
+            // width: 70%;
             padding-bottom: 5.5rem;
         }
     } 
