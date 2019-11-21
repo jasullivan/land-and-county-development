@@ -11,11 +11,9 @@ body.is-open {
     &--dark {
         color: $color-white;
         @include respond(tab-port) {
-       color: $nav-font-color-dark; 
+            color: $nav-font-color-dark; 
         }
     }
-    // color: $color-white;
-    
 }
 .nav-icons {
     position: fixed;
