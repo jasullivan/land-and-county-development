@@ -1,16 +1,22 @@
 .row {
     max-width: 100%;
     padding: 0 3rem;
+    // @include respond(tab-port) {
+    //     max-width: 50rem;
+    // }
     @include respond(tab-port) {
-        max-width: 50rem;
+        max-width: $grid-width;
+        margin: 0 auto;
     }
-    &--flex {
-        @include respond(tab-port) {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-        }
-    }
+
+    @include clearfix;
+    // &--flex {
+    //     @include respond(tab-port) {
+    //         display: -webkit-box;
+    //         display: -ms-flexbox;
+    //         display: flex;
+    //     }
+    // }
     &:not(:last-child) {
         margin-bottom: $gutter-vertical-small;
         @include respond(tab-port) {            
@@ -25,12 +31,7 @@
             }
         }
     }
-    @include respond(tab-port) {
-        max-width: $grid-width;
-        margin: 0 auto;
-    }
-
-    @include clearfix;
+    
 
     // [class^="col-"] {
         
@@ -66,13 +67,13 @@
         @include respond(tab-port) {
             float: left;
         }
-        &--flex {
-            @include respond(tab-port) {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-            }
-        }
+        // &--flex {
+        //     @include respond(tab-port) {
+        //         display: -webkit-box;
+        //         display: -ms-flexbox;
+        //         display: flex;
+        //     }
+        // }
     }
 
     .col-direction__reversed {
