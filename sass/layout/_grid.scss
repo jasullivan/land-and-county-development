@@ -17,13 +17,13 @@
             margin-bottom: $gutter-vertical;
         }
     }
-    &.small-grid {
+    &--small-grid {
         &:not(:last-child) {
-        margin-bottom: $gutter-vertical-xxsmall;
-        @include respond(tab-port) {            
             margin-bottom: $gutter-vertical-xxsmall;
+            @include respond(tab-port) {            
+                margin-bottom: $gutter-vertical-xxsmall;
+            }
         }
-    }
     }
     @include respond(tab-port) {
         max-width: $grid-width;

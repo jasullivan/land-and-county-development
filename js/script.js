@@ -40,8 +40,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
       navBar.classList.add("navigation__offsite-container");
 
         // is this needed?
-      $('body').css({'overflow':'hidden'});
-
+    //   $('body').css({'overflow':'hidden'});
 
     }
     function resize() {
