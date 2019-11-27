@@ -5,7 +5,11 @@ const navBar = document.querySelector(".navigation");
 const logo = document.querySelector(".nav-icons__logo"); 
 // const sticky = navBar.offsetTop + 100;
 const navScrollMarker = document.getElementById('navScrollMarker');
-var sticky = navScrollMarker.offsetTop - 150;
+
+
+const sticky = navScrollMarker.offsetTop - 150;
+
+
 const navMenu = document.querySelector(".nav-icons__menu");
 const navWrap = document.querySelector(".nav-wrap");
 const body = document.querySelector('body');
@@ -16,7 +20,6 @@ function stickyNav() {
         navWrap.classList.remove("sticky");
     }
     else if (window.pageYOffset >= sticky) {
-        // navWrap.classList.remove("pre-sticky");
         navWrap.classList.add("sticky");
     } else {
         navWrap.classList.remove("sticky");
@@ -38,10 +41,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
         body.classList.remove('is-open');
     } else {
       navBar.classList.add("navigation__offsite-container");
-
-        // is this needed?
-    //   $('body').css({'overflow':'hidden'});
-
     }
     function resize() {
         if (window.innerWidth > 900) {
@@ -55,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
     }
     window.onresize = resize;
 });
+
 // sticky nav and mob menu ends
 
 // portfolio accordion
@@ -115,30 +115,33 @@ document.addEventListener("DOMContentLoaded", function(e) {
 var slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-    console.log(n)
-}
 // function plusSlides(n) {
-//     if(n = -1) {
-//         showSlides(slideIndex -= 1);
-//         console.log('-1')
-//     } else {
-//         showSlides(slideIndex += 1);
-//         console.log('1')
-//     }
-    
+//     showSlides(slideIndex += n);
+//     console.log(n)
 // }
+let prevNextButtons = document.getElementsByClassName("prev-next");
+for (var i = 0; i < prevNextButtons.length; i++) {
+    prevNextButtons[i].addEventListener("click", function (e) {
+        if (this.classList.contains('prev')) {
+            console.log(this)
+            showSlides(slideIndex += -1);
+        }
+        else {
+            console.log(this)
+            showSlides(slideIndex += 1);
+        }
+    })
+}
 
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    var imgs = document.getElementsByClassName("portfolio__link");
+    let i;
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+    const imgs = document.getElementsByClassName("portfolio__link");
 
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
