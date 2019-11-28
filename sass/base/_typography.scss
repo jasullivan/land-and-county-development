@@ -6,7 +6,7 @@ body {
 }
 
     
-// .site-heading {
+// site-heading HOMEPAGE ONLY 
 .site-heading {
     /* occasionally get wobble on animation. not known why but this is fixes it, */
     /* this hides the back part of an element when we transform it */
@@ -53,10 +53,12 @@ body {
         }
     }
 }
+// site-heading HOMEPAGE ONLY ENDS
+
 .heading-primary, .heading-secondary,
 .heading-tertiary {
     font-weight: 700;
-    color:$color-dark-grey;
+    // color:$color-dark-grey;
 }
 .heading-primary, .heading-secondary {
     display: inline-block;

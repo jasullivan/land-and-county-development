@@ -131,8 +131,7 @@ body {
 
 .heading-primary, .heading-secondary,
 .heading-tertiary {
-  font-weight: 700;
-  color: #444; }
+  font-weight: 700; }
 
 .heading-primary, .heading-secondary {
   display: inline-block;
