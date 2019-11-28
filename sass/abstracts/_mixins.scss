@@ -6,6 +6,23 @@
     }
 }
 
+@mixin border-bottom {
+    &--border-bottom {
+        position: relative;
+        &:after {
+            border-color: #3ab54a;
+            border-radius: 1em;
+            border-top: 0.1em solid #3ab54a;
+            content: "";
+            position: absolute;
+            right: 100%;
+            bottom: -14px;
+            left: 0;
+            right: 140px;
+        }
+    }
+}
+
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone

@@ -87,12 +87,12 @@ body {
   line-height: 1.7;
   color: #444; }
 
-.heading-primary {
+.site-heading {
   /* occasionally get wobble on animation. not known why but this is fixes it, */
   /* this hides the back part of an element when we transform it */
   backface-visibility: hidden;
   margin-bottom: 2rem; }
-  .heading-primary--main {
+  .site-heading--main {
     display: block;
     font-size: 4rem;
     line-height: normal;
@@ -101,25 +101,61 @@ body {
     animation-duration: 1s;
     animation-timing-function: ease-out; }
     @media only screen and (min-width: 56.25em) {
-      .heading-primary--main {
+      .site-heading--main {
         font-size: 8rem; } }
-  .heading-primary--sub {
+  .site-heading--sub {
     display: block;
     font-size: 4rem;
     line-height: normal;
     font-weight: 400;
     animation: moveInBottom 1s ease-out; }
     @media only screen and (min-width: 56.25em) {
-      .heading-primary--sub {
+      .site-heading--sub {
         font-size: 8rem; } }
+  .site-heading__paragraph {
+    width: 100%;
+    padding: 0rem 1rem 1rem 0;
+    font-size: 1.6rem;
+    line-height: normal;
+    animation: moveInBottom 1s ease-out; }
+    .site-heading__paragraph:not(:last-child) {
+      margin-bottom: 1.6rem; }
+    @media only screen and (min-width: 56.25em) {
+      .site-heading__paragraph {
+        width: 70%;
+        font-size: 2.2rem;
+        line-height: 2.8rem; } }
+    @media only screen and (min-width: 75em) {
+      .site-heading__paragraph {
+        width: 40%; } }
 
-.heading-secondary {
-  font-size: 3.5rem;
+.heading-primary, .heading-secondary,
+.heading-tertiary {
   font-weight: 700;
+  color: #444; }
+
+.heading-primary, .heading-secondary {
   display: inline-block;
-  color: #444;
   letter-spacing: 2px;
   line-height: normal; }
+
+.heading-primary {
+  font-size: 4rem; }
+  .heading-primary--border-bottom {
+    position: relative; }
+    .heading-primary--border-bottom:after {
+      border-color: #3ab54a;
+      border-radius: 1em;
+      border-top: 0.1em solid #3ab54a;
+      content: "";
+      position: absolute;
+      right: 100%;
+      bottom: -14px;
+      left: 0;
+      right: 140px; }
+
+.heading-secondary {
+  font-size: 3.25rem; }
   .heading-secondary--border-bottom {
     position: relative; }
     .heading-secondary--border-bottom:after {
@@ -135,31 +171,13 @@ body {
 
 .heading-tertiary {
   font-size: 2.5rem;
-  font-weight: 700;
-  color: #444; }
+  line-height: 1.25; }
 
-.heading-quaternary {
+.heading-detail {
   font-size: 2rem;
   font-weight: 700;
   padding-bottom: 0.5rem;
   color: #777; }
-
-.heading-paragraph {
-  width: 100%;
-  padding: 0rem 1rem 1rem 0;
-  font-size: 1.6rem;
-  line-height: normal;
-  animation: moveInBottom 1s ease-out; }
-  .heading-paragraph:not(:last-child) {
-    margin-bottom: 1.6rem; }
-  @media only screen and (min-width: 56.25em) {
-    .heading-paragraph {
-      width: 70%;
-      font-size: 2.2rem;
-      line-height: 2.8rem; } }
-  @media only screen and (min-width: 75em) {
-    .heading-paragraph {
-      width: 40%; } }
 
 .paragraph {
   font-size: 1.6rem;

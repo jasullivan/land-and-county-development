@@ -6,7 +6,8 @@ body {
 }
 
     
-.heading-primary {
+// .site-heading {
+.site-heading {
     /* occasionally get wobble on animation. not known why but this is fixes it, */
     /* this hides the back part of an element when we transform it */
     backface-visibility: hidden;
@@ -33,57 +34,52 @@ body {
         font-weight: 400;
         animation: moveInBottom 1s ease-out;
     }
-}
-.heading-secondary {
-    font-size: 3.5rem;
-    font-weight: 700;
-    display: inline-block;
-    color: $color-dark-grey;
-    letter-spacing: 2px;
-    line-height: normal;
-    &--border-bottom {
-        position: relative;
-        &:after {
-            border-color: #3ab54a;
-            border-radius: 1em;
-            border-top: 0.1em solid #3ab54a;
-            content: "";
-            position: absolute;
-            right: 100%;
-            bottom: -14px;
-            left: 0;
-            right: 140px;
+    &__paragraph {
+        width: 100%;
+        padding: 0rem 1rem 1rem 0;
+        font-size: $default-font-size;
+        line-height: normal;
+        animation: moveInBottom 1s ease-out;
+        &:not(:last-child) {
+            margin-bottom: 1.6rem;
         }
-    }   
+        @include respond(tab-port) {
+            width: 70%;
+            font-size: 2.2rem;
+            line-height: 2.8rem;
+        }
+        @include respond(tab-land) {
+            width: 40%;
+        }
+    }
 }
+.heading-primary, .heading-secondary,
 .heading-tertiary {
-    font-size: 2.5rem;
     font-weight: 700;
     color:$color-dark-grey;
 }
-.heading-quaternary {
+.heading-primary, .heading-secondary {
+    display: inline-block;
+    letter-spacing: 2px;
+    line-height: normal;
+}
+.heading-primary {
+    font-size: 4rem;
+    @include border-bottom;  
+}
+.heading-secondary {
+    font-size: 3.25rem;
+    @include border-bottom;  
+}
+.heading-tertiary {
+    font-size: 2.5rem;
+    line-height: 1.25;
+}
+.heading-detail {
     font-size: 2rem;
     font-weight: 700;
     padding-bottom: 0.5rem;
     color: $color-grey;
-}
-.heading-paragraph {
-    width: 100%;
-    padding: 0rem 1rem 1rem 0;
-    font-size: $default-font-size;
-    line-height: normal;
-    animation: moveInBottom 1s ease-out;
-    &:not(:last-child) {
-        margin-bottom: 1.6rem;
-    }
-    @include respond(tab-port) {
-        width: 70%;
-        font-size: 2.2rem;
-        line-height: 2.8rem;
-    }
-    @include respond(tab-land) {
-        width: 40%;
-    }
 }
 .paragraph {
     font-size: $default-font-size;
