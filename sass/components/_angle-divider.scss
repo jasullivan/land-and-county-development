@@ -6,26 +6,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image:url(../imgs/background-house2.jpg);   
-    
-    
-
-
-    // min-height: 225px;
-    // position: relative;
-    // opacity: 0.85;
-    // background-attachment: fixed;
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-image:url(../imgs/background-house2.jpg);   
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    
-    
-    // -webkit-overflow-scrolling:touch;
-    // position:sticky;
+    background-image:url(../imgs/background-house2.jpg);       
     @include respond(tab-port) {
         // min-height: 300px;
     }
@@ -33,10 +14,8 @@
         min-height: 300px;
         background-attachment: fixed;
     }
-    h2 {
+    &__content {
         font-size: 1.8rem;
-        // width: 0%;
-        // max-width: 120rem;
         font-weight: normal;
         color: $color-black;
         text-align: center;

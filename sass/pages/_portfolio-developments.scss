@@ -1,10 +1,9 @@
-.portfolio-development {
+.portfolio-developments {
     position: relative;
     top: 5rem;
     height: 40rem;
     background-attachment: scroll;
     background-position: top;
-    
     background-repeat:no-repeat;
     background-size:cover;
     color: $color-white;
@@ -24,16 +23,9 @@
         bottom: 5%;
         left: 3rem;
         line-height: normal;
-        // -webkit-transform: translate(-50%, -50%);
-        // transform: translate(-50%, -50%);
-            font-size: 2rem;
+        font-size: 2rem;
         @include respond(tab-port) {
-            width: initial;
             font-size: 3rem;
-            bottom: 5%;
-            left: 3rem;
-            -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
         }
     }
     &__item {
