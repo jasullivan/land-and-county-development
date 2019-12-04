@@ -31,6 +31,13 @@
             }
         }
     }
+    &--property-development {
+        position: relative;
+        top: 2rem;
+    }
+    img {
+        width: 100%;
+    }
     
 
     // [class^="col-"] {
@@ -50,6 +57,9 @@
     // }
 
     .col-direction__normal {
+        img {
+            width: 100%;
+        }
         &:not(:last-child) {
             margin-right: 0;
             margin-bottom: $gutter-vertical-xxsmall;
@@ -77,6 +87,9 @@
     }
 
     .col-direction__reversed {
+        img {
+            width: 100%;
+        }
         &:not(:last-child) {
             margin-right: 0;
             margin-bottom: $gutter-vertical-xxsmall;

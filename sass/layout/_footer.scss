@@ -3,9 +3,13 @@
     padding: 10rem 0;
     font-size: 1.4rem;
     color: $color-grey;
+    position: relative;
+        top: 5rem;
 
     @include respond(tab-port) {
         padding: 8rem 0;
+        
+        
     }
 
     &__logo-box {

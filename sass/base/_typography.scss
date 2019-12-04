@@ -85,7 +85,7 @@ body {
 }
 .paragraph {
     font-size: $default-font-size;
-    line-height: normal;
+    // line-height: normal;
     &:not(:last-child) {
         margin-bottom: 1.6rem;
     }
