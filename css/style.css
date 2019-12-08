@@ -151,7 +151,7 @@ body {
       right: 100%;
       bottom: -14px;
       left: 0;
-      right: 140px; }
+      right: 20%; }
 
 .heading-secondary {
   font-size: 3.25rem; }
@@ -166,7 +166,7 @@ body {
       right: 100%;
       bottom: -14px;
       left: 0;
-      right: 140px; }
+      right: 20%; }
 
 .heading-tertiary {
   font-size: 2.5rem;
@@ -536,6 +536,38 @@ body.is-open {
     transform: translateY(10rem);
     color: #fff; } }
 
+.fullwidth-bgheader {
+  position: relative;
+  top: 5rem;
+  height: 40rem;
+  background-attachment: scroll;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 7rem;
+  color: #fff;
+  transition: all 0.5s; }
+  .fullwidth-bgheader__calvert {
+    background-image: url(../imgs/hero_narrow_img_01.jpg); }
+  .fullwidth-bgheader__drummonds {
+    background-image: url(../imgs/hero_narrow_img_drummonds_lrg.jpg); }
+  .fullwidth-bgheader__rushes {
+    background-image: url(../imgs/hero_narrow_img_rushes_lrg.jpg); }
+  .fullwidth-bgheader__arkesden {
+    background-image: url(../imgs/hero_narrow_img_02.jpg); }
+  .fullwidth-bgheader__hilltop {
+    background-image: url(../imgs/hero_narrow_img_03.jpg); }
+  .fullwidth-bgheader__text-box {
+    width: 80%;
+    position: absolute;
+    bottom: 5%;
+    left: 3rem;
+    line-height: normal;
+    font-size: 2rem; }
+    @media only screen and (min-width: 56.25em) {
+      .fullwidth-bgheader__text-box {
+        font-size: 3rem; } }
+
 .featured-property {
   padding: 4rem 0 4rem; }
   .featured-property__image {
@@ -762,48 +794,17 @@ body.is-open {
         left: 0;
         right: 140px; }
 
-.portfolio-developments {
-  position: relative;
-  top: 5rem;
-  height: 40rem;
-  background-attachment: scroll;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 7rem;
-  color: #fff;
-  transition: all 0.5s; }
-  .portfolio-developments__calvert {
-    background-image: url(../imgs/hero_narrow_img_01.jpg); }
-  .portfolio-developments__drummonds {
-    background-image: url(../imgs/hero_narrow_img_drummonds_lrg.jpg); }
-  .portfolio-developments__rushes {
-    background-image: url(../imgs/hero_narrow_img_rushes_lrg.jpg); }
-  .portfolio-developments__arkesden {
-    background-image: url(../imgs/hero_narrow_img_02.jpg); }
-  .portfolio-developments__hilltop {
-    background-image: url(../imgs/hero_narrow_img_03.jpg); }
-  .portfolio-developments__text-box {
-    width: 80%;
-    position: absolute;
-    bottom: 5%;
-    left: 3rem;
-    line-height: normal;
-    font-size: 2rem; }
-    @media only screen and (min-width: 56.25em) {
-      .portfolio-developments__text-box {
-        font-size: 3rem; } }
-  .portfolio-developments__item {
+.portfolio-developments__item {
+  position: relative; }
+  .portfolio-developments__item img {
     position: relative; }
-    .portfolio-developments__item img {
-      position: relative; }
-    .portfolio-developments__item h3 {
-      position: absolute;
-      bottom: 1rem;
-      left: 2rem;
-      font-size: 3rem;
-      color: #fff;
-      font-weight: normal; }
+  .portfolio-developments__item h3 {
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+    font-size: 3rem;
+    color: #fff;
+    font-weight: normal; }
 
 /***test****/
 /*Zoom In*/

@@ -1,48 +1,4 @@
 .portfolio-developments {
-    position: relative;
-    top: 5rem;
-    height: 40rem;
-    background-attachment: scroll;
-    background-position: top;
-    background-repeat:no-repeat;
-    background-size:cover;
-    margin-bottom: 7rem;
-    color: $color-white;
-    transition: all 0.5s;
-
-    // development
-    &__calvert {
-        background-image:url(../imgs/hero_narrow_img_01.jpg);
-    }
-    &__drummonds {
-        background-image:url(../imgs/hero_narrow_img_drummonds_lrg.jpg);
-    }
-
-    &__rushes {
-        background-image:url(../imgs/hero_narrow_img_rushes_lrg.jpg);
-    }
-
-    // development
-    &__arkesden {
-        background-image:url(../imgs/hero_narrow_img_02.jpg);
-    }
-
-    // development
-    &__hilltop {
-        background-image:url(../imgs/hero_narrow_img_03.jpg);
-    }
-    
-    &__text-box {
-        width: 80%;
-        position: absolute;
-        bottom: 5%;
-        left: 3rem;
-        line-height: normal;
-        font-size: 2rem;
-        @include respond(tab-port) {
-            font-size: 3rem;
-        }
-    }
     &__item {
         position: relative;
         img {
@@ -57,6 +13,7 @@
             font-weight: normal;
         }
     }
+}
     // &__property-grid {
     //     position: relative;
     //     top: 7rem;
@@ -65,7 +22,7 @@
     //     position: relative;
     //     top: 8rem;
     // }
-}
+
 
 
 /***test****/
