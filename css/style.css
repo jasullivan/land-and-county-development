@@ -547,16 +547,18 @@ body.is-open {
   margin-bottom: 7rem;
   color: #fff;
   transition: all 0.5s; }
+  .fullwidth-bgheader__about {
+    background-image: url(../imgs/hero_narrow_img_about_lrg.jpg); }
   .fullwidth-bgheader__calvert {
     background-image: url(../imgs/hero_narrow_img_01.jpg); }
-  .fullwidth-bgheader__drummonds {
-    background-image: url(../imgs/hero_narrow_img_drummonds_lrg.jpg); }
-  .fullwidth-bgheader__rushes {
-    background-image: url(../imgs/hero_narrow_img_rushes_lrg.jpg); }
   .fullwidth-bgheader__arkesden {
     background-image: url(../imgs/hero_narrow_img_02.jpg); }
   .fullwidth-bgheader__hilltop {
     background-image: url(../imgs/hero_narrow_img_03.jpg); }
+  .fullwidth-bgheader__drummonds {
+    background-image: url(../imgs/hero_narrow_img_drummonds_lrg.jpg); }
+  .fullwidth-bgheader__rushes {
+    background-image: url(../imgs/hero_narrow_img_rushes_lrg.jpg); }
   .fullwidth-bgheader__text-box {
     width: 80%;
     position: absolute;

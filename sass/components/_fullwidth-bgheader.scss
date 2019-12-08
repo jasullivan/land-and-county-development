@@ -10,6 +10,9 @@
     color: $color-white;
     transition: all 0.5s;
 
+    // pages
+    &__about {background-image:url(../imgs/hero_narrow_img_about_lrg.jpg);}
+
     // development
     &__calvert {background-image:url(../imgs/hero_narrow_img_01.jpg);}
     &__arkesden {background-image:url(../imgs/hero_narrow_img_02.jpg);}
