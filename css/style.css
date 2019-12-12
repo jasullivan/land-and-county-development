@@ -559,6 +559,14 @@ body.is-open {
     background-image: url(../imgs/hero_narrow_img_drummonds_lrg.jpg); }
   .fullwidth-bgheader__rushes {
     background-image: url(../imgs/hero_narrow_img_rushes_lrg.jpg); }
+  .fullwidth-bgheader__bowditch {
+    background-image: url(../imgs/hero_narrow_img_bowditch_lrg.jpg); }
+  .fullwidth-bgheader__wedmore {
+    background-image: url(../imgs/hero_narrow_img_wedmore_lrg.jpg); }
+  .fullwidth-bgheader__harwood {
+    background-image: url(../imgs/hero_narrow_img_harwood_lrg.jpg); }
+  .fullwidth-bgheader__burroughs {
+    background-image: url(../imgs/hero_narrow_img_burroughs_lrg.jpg); }
   .fullwidth-bgheader__text-box {
     width: 80%;
     position: absolute;
