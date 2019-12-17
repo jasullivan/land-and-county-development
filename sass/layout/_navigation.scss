@@ -129,6 +129,7 @@ body.is-open {
     ul {
         text-align: center;
         width: 100vw;
+        list-style: none;
         @include respond(tab-port) {
             // width: 100%;
             display: flex;

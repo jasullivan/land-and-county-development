@@ -64,13 +64,18 @@ html {
 body {
   box-sizing: border-box; }
 
-ul {
-  list-style: none; }
-
 a {
   text-decoration: none;
   color: inherit;
   position: relative; }
+  a.contact {
+    margin-bottom: 1.6rem;
+    font-size: 1.6rem;
+    display: block; }
+    a.contact--small-marg-bottom {
+      font-size: 1.6rem; }
+      a.contact--small-marg-bottom:not(:last-child) {
+        margin-bottom: 0.3rem; }
 
 a:hover {
   color: inherit;
@@ -182,6 +187,10 @@ body {
   font-size: 1.6rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 1.6rem; }
+  .paragraph--small-marg-bottom {
+    font-size: 1.6rem; }
+    .paragraph--small-marg-bottom:not(:last-child) {
+      margin-bottom: 0.3rem; }
 
 .row {
   max-width: 100%;
@@ -207,6 +216,12 @@ body {
   .row--property-development {
     position: relative;
     top: 2rem; }
+    .row--property-development ul {
+      width: 96%;
+      margin-left: 4%;
+      font-size: 1.6rem; }
+      .row--property-development ul li {
+        margin-bottom: 1rem; }
   .row img {
     width: 100%; }
   .row .col-direction__normal img {
@@ -481,7 +496,8 @@ body.is-open {
       animation: moveInTop 0.5s ease-out; } }
   .navigation ul {
     text-align: center;
-    width: 100vw; }
+    width: 100vw;
+    list-style: none; }
     @media only screen and (min-width: 56.25em) {
       .navigation ul {
         display: flex;

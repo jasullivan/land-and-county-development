@@ -34,6 +34,14 @@
     &--property-development {
         position: relative;
         top: 2rem;
+        ul {
+            width: 96%;
+            margin-left: 4%;
+            font-size: 1.6rem;
+            li {
+                margin-bottom: 1rem;
+            }
+        }
     }
     img {
         width: 100%;
