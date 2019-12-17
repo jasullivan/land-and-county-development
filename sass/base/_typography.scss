@@ -66,6 +66,7 @@ body {
     line-height: normal;
 }
 .heading-primary {
+    margin: 2rem 0;
     font-size: 4rem;
     @include border-bottom;  
 }

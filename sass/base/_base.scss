@@ -12,6 +12,7 @@
 /* Needs to be % so that it doesn't overide the browser default size. */
 /* this would mean users wouldn't be able to zoom in */
 /* font-size: 10px; */
+
 /* this defines what 1rem is*/
 .bgred {
     background: red;
@@ -52,7 +53,7 @@ a {
     // &:hover {
     //    color: inherit; 
     // }
-    padding-bottom: 5px;
+    // padding-bottom: 5px;
     position: relative;
 //   text-decoration: none;
 //   transition: color .4s ease-out;
