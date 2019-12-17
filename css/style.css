@@ -91,6 +91,9 @@ body {
   line-height: 1.7;
   color: #444; }
 
+p {
+  font-size: 1.6rem; }
+
 .site-heading {
   /* occasionally get wobble on animation. not known why but this is fixes it, */
   /* this hides the back part of an element when we transform it */
@@ -759,6 +762,26 @@ body.is-open {
     width: 100%; }
   .right-side {
     width: 100%; } }
+
+.property-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer; }
+  .property-link__arrow {
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.5s; }
+  .property-link__text {
+    margin: 0rem 1rem 0rem 1.5rem; }
+    @media only screen and (min-width: 56.25em) {
+      .property-link__text {
+        margin: 0 1rem 0 1.5rem; } }
+  .property-link:hover .property-link__arrow {
+    stroke: #3ab54a;
+    -webkit-transform: translate(30%, 0%);
+    -ms-transform: translate(30%, 0%);
+    transform: translate(30%, 0%); }
 
 .portfolio {
   padding: 10rem 0rem 10rem;

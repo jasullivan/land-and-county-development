@@ -110,6 +110,15 @@ document.addEventListener("DOMContentLoaded", function(e) {
 // }
 // hover pics in portfolio
 
+// arrow link from home page 
+let propertyArrowLinks = document.querySelectorAll('.property-link');
+for (let i = 0; i < propertyArrowLinks.length; i++) {
+    propertyArrowLinks[i].addEventListener("click", function (e) {
+        console.log(this);
+        this.classList.add('moveRight')
+    });
+}
+
 
 
 

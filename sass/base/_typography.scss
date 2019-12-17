@@ -5,7 +5,7 @@ body {
     color: $color-dark-grey;
 }
 
-    
+p {font-size: $default-font-size;}
 // site-heading HOMEPAGE ONLY 
 .site-heading {
     /* occasionally get wobble on animation. not known why but this is fixes it, */
