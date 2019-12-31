@@ -1,7 +1,7 @@
 body.is-open {
     height: 100vh;
-    overflow-y: hidden;
-    position:fixed;
+    // overflow-y: hidden;
+    // position: fixed;
 }
 .nav-wrap {
     height: 8rem;
@@ -115,6 +115,8 @@ body.is-open {
     font-size: 3.5rem;
     &__offsite-container {
         position: fixed;
+
+        // removed
         transition: transform 0.2s ease-out;
     }
     @include respond(tab-port) {
@@ -124,6 +126,8 @@ body.is-open {
         font-size: 2rem;
         background: none;
         right: 0;
+
+        // removed
         animation: moveInTop 0.5s ease-out;
     }   
     ul {

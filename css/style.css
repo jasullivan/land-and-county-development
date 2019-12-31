@@ -381,9 +381,7 @@ p {
         float: none; } }
 
 body.is-open {
-  height: 100vh;
-  overflow-y: hidden;
-  position: fixed; }
+  height: 100vh; }
 
 .nav-wrap {
   height: 8rem;
@@ -805,6 +803,8 @@ body.is-open {
     .portfolio__link:hover p {
       color: #777;
       transition: all 1s; }
+    .portfolio__link.moveRight p {
+      color: #777; }
     @media only screen and (min-width: 56.25em) {
       .portfolio__link.moveRight {
         -webkit-transform: translate(40%, 0%);
