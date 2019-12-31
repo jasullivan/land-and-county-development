@@ -73,7 +73,12 @@ a {
     }
 }
 
-
+.generic-page {
+    padding: 10rem 0rem 10rem;
+    &.no-padding-bottom {
+        padding: 10rem 0rem 0rem;
+    }
+}
 
 
 // a {

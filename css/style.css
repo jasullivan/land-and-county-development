@@ -80,6 +80,11 @@ a {
       a.contact--small-marg-bottom:not(:last-child) {
         margin-bottom: 0.3rem; }
 
+.generic-page {
+  padding: 10rem 0rem 10rem; }
+  .generic-page.no-padding-bottom {
+    padding: 10rem 0rem 0rem; }
+
 a:hover {
   color: inherit;
   right: 0;
@@ -560,13 +565,13 @@ body.is-open {
 
 .fullwidth-bgheader {
   position: relative;
-  top: 5rem;
+  top: -1.5rem;
   height: 40rem;
   background-attachment: scroll;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 7rem;
+  margin-bottom: 1rem;
   color: #fff;
   transition: all 0.5s; }
   .fullwidth-bgheader__about {
