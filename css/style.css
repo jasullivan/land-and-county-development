@@ -62,7 +62,10 @@ html {
       font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  max-width: 230rem;
+  width: 100%;
+  margin: 0 auto; }
 
 a {
   text-decoration: none;
@@ -386,7 +389,9 @@ body.is-open {
 .nav-wrap {
   height: 8rem;
   position: absolute;
+  max-width: 230rem;
   width: 100%;
+  margin: 0 auto;
   color: #ffffff; }
   .nav-wrap--dark {
     color: #fff; }
@@ -595,9 +600,9 @@ body.is-open {
       .fullwidth-bgheader__text-box {
         font-size: 3rem; } }
 
-.featured-property {
+.featured-properties {
   padding: 4rem 0 4rem; }
-  .featured-property__image {
+  .featured-properties__image {
     width: 100%; }
 
 .angle-divider {
@@ -608,9 +613,11 @@ body.is-open {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../imgs/parallax-house.jpg); }
+  background-image: url(../imgs/parallax-house.jpg);
+  margin-bottom: 3rem; }
   @media only screen and (min-width: 75em) {
     .angle-divider {
+      margin-bottom: 4rem;
       min-height: 300px;
       background-attachment: fixed; } }
   .angle-divider__content {
@@ -629,7 +636,7 @@ body.is-open {
         padding-bottom: 5.5rem; } }
   .angle-divider__svg {
     width: 100%;
-    max-width: 200rem;
+    max-width: 230rem;
     position: absolute;
     top: 10.5rem;
     z-index: 3; }

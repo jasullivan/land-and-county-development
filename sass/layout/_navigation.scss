@@ -6,7 +6,9 @@ body.is-open {
 .nav-wrap {
     height: 8rem;
     position: absolute;
+    max-width: 230rem;
     width: 100%;
+    margin: 0 auto;
     color: $nav-font-color;
     &--dark {
         color: $color-white;
