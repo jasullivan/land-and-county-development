@@ -79,11 +79,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
 //     expandImg.parentElement.style.display = "block";
 //     console.log(imgs);
 //     if(imgs.classList.contains('portfolio__one')) {
-//         expandImg.src = "imgs/portfolio_harwood1a.jpg";
+//         expandImg.src = "imgs/portfolio_harwood.jpg";
 //     } else if (imgs.classList.contains('portfolio__two')) {
-//         expandImg.src = "imgs/portfolio_clavering1a.jpg";
+//         expandImg.src = "imgs/portfolio_clavering.jpg";
 //     } else {
-//         expandImg.src = "imgs/portfolio_hilltop1a.jpg";
+//         expandImg.src = "imgs/portfolio_hilltop.jpg";
 //     }
 // }
 
@@ -97,14 +97,14 @@ document.addEventListener("DOMContentLoaded", function(e) {
         // imgText.innerHTML = imgs.alt;
         // expandImg.parentElement.style.display = "block";
         // expandImg.parentElement.style.opacity = "1";
-        // expandImg.src = "imgs/portfolio_harwood1a.jpg";
+        // expandImg.src = "imgs/portfolio_harwood.jpg";
 //         console.log(expandImg);
 //         if (this.classList.contains('portfolio__one')) {
-//             expandImg.src = "imgs/portfolio_harwood1a.jpg";
+//             expandImg.src = "imgs/portfolio_harwood.jpg";
 //         } else if (this.classList.contains('portfolio__two')) {
-//             expandImg.src = "imgs/portfolio_clavering1a.jpg";
+//             expandImg.src = "imgs/portfolio_clavering.jpg";
 //         } else {
-//             expandImg.src = "imgs/portfolio_hilltop1a.jpg";
+//             expandImg.src = "imgs/portfolio_hilltop.jpg";
 //         }
 //     })
 // }

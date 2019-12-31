@@ -306,7 +306,7 @@ p {
   position: relative;
   background-attachment: scroll;
   background-position: top;
-  background-image: url(../imgs/hero_img_01.jpg);
+  background-image: url(../imgs/hero_img_header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -569,11 +569,11 @@ body.is-open {
   .fullwidth-bgheader__about {
     background-image: url(../imgs/hero_narrow_img_about_lrg.jpg); }
   .fullwidth-bgheader__calvert {
-    background-image: url(../imgs/hero_narrow_img_01.jpg); }
+    background-image: url(../imgs/hero_narrow_img_calvert.jpg); }
   .fullwidth-bgheader__arkesden {
-    background-image: url(../imgs/hero_narrow_img_02.jpg); }
+    background-image: url(../imgs/hero_narrow_img_arkesden.jpg); }
   .fullwidth-bgheader__hilltop {
-    background-image: url(../imgs/hero_narrow_img_03.jpg); }
+    background-image: url(../imgs/hero_narrow_img_hilltop.jpg); }
   .fullwidth-bgheader__drummonds {
     background-image: url(../imgs/hero_narrow_img_drummonds_lrg.jpg); }
   .fullwidth-bgheader__rushes {
@@ -610,7 +610,7 @@ body.is-open {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../imgs/background-house2.jpg); }
+  background-image: url(../imgs/parallax-house.jpg); }
   @media only screen and (min-width: 75em) {
     .angle-divider {
       min-height: 300px;
@@ -802,26 +802,25 @@ body.is-open {
     @media only screen and (min-width: 56.25em) {
       .portfolio__link {
         margin: 0 2rem; } }
-    .portfolio__link.moveRight {
-      color: #28b485; }
-      @media only screen and (min-width: 56.25em) {
-        .portfolio__link.moveRight {
-          color: #444;
-          -webkit-transform: translate(40%, 0%);
-          -ms-transform: translate(40%, 0%);
-          transform: translate(40%, 0%); } }
+    .portfolio__link:hover p {
+      color: #777;
+      transition: all 1s; }
+    @media only screen and (min-width: 56.25em) {
+      .portfolio__link.moveRight {
+        -webkit-transform: translate(40%, 0%);
+        -ms-transform: translate(40%, 0%);
+        transform: translate(40%, 0%); } }
     .portfolio__link h3 {
       font-weight: normal;
-      font-size: 2rem; }
+      font-size: 2rem;
+      color: #444; }
       @media only screen and (min-width: 56.25em) {
         .portfolio__link h3 {
           font-size: 2.25rem; } }
-    .portfolio__link a {
+    .portfolio__link p {
       font-size: 1.6rem;
       font-weight: normal;
       color: #444; }
-      .portfolio__link a:hover {
-        color: #777; }
     .portfolio__link:first-of-type {
       margin: 0rem 2rem 1rem 0; }
       @media only screen and (min-width: 56.25em) {
@@ -830,9 +829,6 @@ body.is-open {
     @media only screen and (min-width: 56.25em) {
       .portfolio__link {
         margin: 0rem 2rem 2rem 0; } }
-    .portfolio__link--grey {
-      color: grey;
-      transition: all 0.5s; }
     .portfolio__link--border-bottom {
       position: relative; }
       .portfolio__link--border-bottom:after {
