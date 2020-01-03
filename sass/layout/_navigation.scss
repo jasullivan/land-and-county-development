@@ -99,27 +99,29 @@ body.is-open {
 }
 
 .navigation {
-    // color: $nav-font-color;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    // justify-content: flex-end;
-    // position: fixed;
+    
     top: 0;
     bottom: 0;
-    width: 100vw;
+    width: 0;
     background: $color-black;
     z-index: 1;
-    right: -100vw;
+    right: 0;
     font-size: 3.5rem;
+    transition: 0.2s ease-out;
+    
     &__offsite-container {
         position: fixed;
-
-        // removed
-        transition: transform 0.2s ease-out;
+        ul {
+            opacity: 0;
+        }
+        transition: 0.2s ease-out;
+        // transition: transform 0.5s ease-out;
     }
     @include respond(tab-port) {
         position: absolute;
@@ -182,9 +184,16 @@ body.is-open {
         
 }
 .show-menu {
-    -webkit-transform: translateX(-100vw); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
-    -ms-transform: translateX(-100vw); /* IE 9 */
-    transform: translateX(-100vw);
+    /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+    // -webkit-transform: width(-200vw); 
+     /* IE 9 */
+    // -ms-transform: width(-200vw);
+    // transform: width(-200vw);
+
+    ul {
+        opacity: 1; 
+    }
+    width: 100vw;
 }
 .pre-sticky {
     @include respond(tab-port) {

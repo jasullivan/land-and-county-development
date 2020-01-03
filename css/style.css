@@ -488,14 +488,17 @@ body.is-open {
   align-items: center;
   top: 0;
   bottom: 0;
-  width: 100vw;
+  width: 0;
   background: #000;
   z-index: 1;
-  right: -100vw;
-  font-size: 3.5rem; }
+  right: 0;
+  font-size: 3.5rem;
+  transition: 0.2s ease-out; }
   .navigation__offsite-container {
     position: fixed;
-    transition: transform 0.2s ease-out; }
+    transition: 0.2s ease-out; }
+    .navigation__offsite-container ul {
+      opacity: 0; }
   @media only screen and (min-width: 56.25em) {
     .navigation {
       position: absolute;
@@ -542,11 +545,11 @@ body.is-open {
     left: 0; }
 
 .show-menu {
-  -webkit-transform: translateX(-100vw);
   /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
-  -ms-transform: translateX(-100vw);
   /* IE 9 */
-  transform: translateX(-100vw); }
+  width: 100vw; }
+  .show-menu ul {
+    opacity: 1; }
 
 @media only screen and (min-width: 56.25em) {
   .pre-sticky {
