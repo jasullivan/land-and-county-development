@@ -153,7 +153,7 @@ p {
 
 .heading-primary {
   margin: 2rem 0;
-  font-size: 4rem; }
+  font-size: 3.25rem; }
   .heading-primary--border-bottom {
     position: relative; }
     .heading-primary--border-bottom:after {
@@ -166,6 +166,9 @@ p {
       bottom: -14px;
       left: 0;
       right: 20%; }
+  @media only screen and (min-width: 56.25em) {
+    .heading-primary {
+      font-size: 4rem; } }
 
 .heading-secondary {
   font-size: 3.25rem; }
@@ -635,10 +638,12 @@ body.is-open {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    width: 80%; }
     @media only screen and (min-width: 56.25em) {
       .angle-divider__content {
         font-size: 2.4rem;
+        width: 70%;
         padding-bottom: 5.5rem; } }
   .angle-divider__svg {
     width: 100%;

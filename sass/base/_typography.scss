@@ -67,8 +67,11 @@ p {font-size: $default-font-size;}
 }
 .heading-primary {
     margin: 2rem 0;
-    font-size: 4rem;
+    font-size: 3.25rem;
     @include border-bottom;  
+    @include respond(tab-port) {
+        font-size: 4rem;
+    }
 }
 .heading-secondary {
     font-size: 3.25rem;
