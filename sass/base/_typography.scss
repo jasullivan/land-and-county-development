@@ -89,7 +89,9 @@ p {font-size: $default-font-size;}
 }
 .paragraph {
     font-size: $default-font-size;
-    // line-height: normal;
+    @include respond(tab-port) {
+        font-size: 1.8rem;  
+    }
     &:not(:last-child) {
         margin-bottom: 1.6rem;
     }

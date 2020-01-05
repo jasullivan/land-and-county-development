@@ -197,6 +197,9 @@ p {
 
 .paragraph {
   font-size: 1.6rem; }
+  @media only screen and (min-width: 56.25em) {
+    .paragraph {
+      font-size: 1.8rem; } }
   .paragraph:not(:last-child) {
     margin-bottom: 1.6rem; }
   .paragraph--small-marg-bottom {
@@ -813,6 +816,9 @@ body.is-open {
   justify-content: flex-end;
   cursor: pointer;
   margin: 1rem 1rem 0rem 1.5rem; }
+  .property-link--center {
+    margin: 2rem 1rem 0rem 1.5rem;
+    justify-content: center; }
   .property-link__arrow {
     width: 3rem;
     height: 3rem;

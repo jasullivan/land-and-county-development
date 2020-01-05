@@ -4,8 +4,9 @@
     justify-content: flex-end;
     cursor: pointer;
     margin: 1rem 1rem 0rem 1.5rem;
-    @include respond(tab-port) {
-        // margin: 0 1rem 0 1.5rem;
+    &--center {
+        margin: 2rem 1rem 0rem 1.5rem;
+        justify-content: center; 
     }
     &__arrow {
         width: 3rem;
