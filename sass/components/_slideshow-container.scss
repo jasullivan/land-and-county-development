@@ -19,22 +19,32 @@
         -moz-user-select: none; /* Firefox 2+ */
         -ms-user-select: none; /* IE 10+ */
         user-select: none; /* Standard syntax */
-        width: 4rem;
+        // width: 4rem;
+        display: flex;
+        height: 5rem;
+        width: 5rem;
+        align-items: center;
+        padding: 1rem;
+
     }
 
     /* Position the "next button" to the right */
     .prev {
         left: 0;
-        border-radius:  0 3px 3px 0;
+        border-radius:  0 5px 5px 0;
+        text-align: left;
+        background: rgba(0,0,0,0.3);
     }
     .next {
         right: 0;
-        border-radius: 3px 0 0 3px;
+        border-radius: 5px 0 0 5px;
+        text-align: right;
+        background: rgba(0,0,0,0.3);
     }
 
     /* On hover, add a black background color with a little bit see-through */
     .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
+        background: rgba(0,0,0,0.8);
     }
 }
 
@@ -47,26 +57,47 @@
 }
 // img {vertical-align: middle;}
 
+.portfolio__names {
+  display: none;
+  @include respond(tab-port) {
+    display: block;
+  }
+}
+
 /* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 2rem;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
   width: 100%;
   text-align: center;
+  top: 0px;
+  // @include respond(tab-port) {
+  //   bottom: 8px;
+  // }
+  &__mob-button {
+    display: inline-block;
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
 }
 
 /* Number text (1/3 etc) */
 .number-text {
   color: #f2f2f2;
-  font-size: 12px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
+  font-size: 2rem;
+  // @include respond(tab-port) {
+  //   font-size: 1.2rem;
+  // }
 }
-
+.slideshow-link {
+  position: relative;
+}
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
