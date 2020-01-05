@@ -67,15 +67,15 @@
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 8px 12px;
   position: absolute;
   width: 100%;
   text-align: center;
   top: 0px;
-  // @include respond(tab-port) {
-  //   bottom: 8px;
-  // }
+  @include respond(tab-port) {
+    font-size: 2rem;
+  }
   &__mob-button {
     display: inline-block;
     @include respond(tab-port) {
@@ -90,10 +90,10 @@
   padding: 8px 12px;
   position: absolute;
   top: 0;
-  font-size: 2rem;
-  // @include respond(tab-port) {
-  //   font-size: 1.2rem;
-  // }
+  font-size: 1.6rem;
+  @include respond(tab-port) {
+    font-size: 2rem;
+  }
 }
 .slideshow-link {
   position: relative;

@@ -716,12 +716,15 @@ body.is-open {
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 8px 12px;
   position: absolute;
   width: 100%;
   text-align: center;
   top: 0px; }
+  @media only screen and (min-width: 56.25em) {
+    .text {
+      font-size: 2rem; } }
   .text__mob-button {
     display: inline-block; }
     @media only screen and (min-width: 56.25em) {
@@ -734,7 +737,10 @@ body.is-open {
   padding: 8px 12px;
   position: absolute;
   top: 0;
-  font-size: 2rem; }
+  font-size: 1.6rem; }
+  @media only screen and (min-width: 56.25em) {
+    .number-text {
+      font-size: 2rem; } }
 
 .slideshow-link {
   position: relative; }
