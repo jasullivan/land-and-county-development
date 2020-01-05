@@ -18,9 +18,9 @@
     //     }
     // }
     &:not(:last-child) {
-        margin-bottom: $gutter-vertical-small;
+        margin-bottom: $gutter-vertical-xsmall;
         @include respond(tab-port) {            
-            margin-bottom: $gutter-vertical;
+            margin-bottom: $gutter-vertical-small;
         }
     }
     &--small-grid {

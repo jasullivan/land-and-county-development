@@ -219,10 +219,10 @@ p {
     display: table;
     clear: both; }
   .row:not(:last-child) {
-    margin-bottom: 5rem; }
+    margin-bottom: 4rem; }
     @media only screen and (min-width: 56.25em) {
       .row:not(:last-child) {
-        margin-bottom: 6rem; } }
+        margin-bottom: 5rem; } }
   .row--small-grid:not(:last-child) {
     margin-bottom: 1rem; }
     @media only screen and (min-width: 56.25em) {
@@ -572,7 +572,7 @@ body.is-open {
 
 .fullwidth-bgheader {
   position: relative;
-  top: -1.5rem;
+  top: 0;
   height: 40rem;
   background-attachment: scroll;
   background-position: top;
@@ -770,9 +770,9 @@ body.is-open {
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 2s;
   animation-name: fade;
-  animation-duration: 1s; }
+  animation-duration: 2s; }
 
 @-webkit-keyframes fade {
   from {
