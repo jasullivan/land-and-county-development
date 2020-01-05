@@ -811,16 +811,24 @@ body.is-open {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  cursor: pointer; }
+  cursor: pointer;
+  margin: 1rem 1rem 0rem 1.5rem; }
   .property-link__arrow {
     width: 3rem;
     height: 3rem;
     transition: all 0.5s; }
   .property-link__text {
     margin: 0rem 1rem 0rem 1.5rem; }
+  .property-link--desk {
+    display: none; }
     @media only screen and (min-width: 56.25em) {
-      .property-link__text {
-        margin: 0 1rem 0 1.5rem; } }
+      .property-link--desk {
+        display: flex; } }
+  .property-link--mob {
+    display: flex; }
+    @media only screen and (min-width: 56.25em) {
+      .property-link--mob {
+        display: none; } }
   .property-link:hover .property-link__arrow {
     stroke: #3ab54a;
     -webkit-transform: translate(30%, 0%);
