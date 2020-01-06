@@ -532,7 +532,7 @@ body.is-open {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: #fff;
   transition: all 0.5s; }
   .fullwidth-bgheader--about {
