@@ -11,20 +11,20 @@
     transition: all 0.5s;
 
     // pages
-    &__about {background-image:url(../imgs/hero_narrow_img_about_lrg.jpg);}
+    &--about {background-image:url(../imgs/hero_narrow_img_about_lrg.jpg);}
 
     // development
-    &__calvert {background-image:url(../imgs/hero_narrow_img_calvert.jpg);}
-    &__arkesden {background-image:url(../imgs/hero_narrow_img_arkesden.jpg);}
-    &__hilltop {background-image:url(../imgs/hero_narrow_img_hilltop.jpg);}
+    &--calvert {background-image:url(../imgs/hero_narrow_img_calvert.jpg);}
+    &--arkesden {background-image:url(../imgs/hero_narrow_img_arkesden.jpg);}
+    &--hilltop {background-image:url(../imgs/hero_narrow_img_hilltop.jpg);}
 
     // property
-    &__drummonds {background-image:url(../imgs/hero_narrow_img_drummonds_lrg.jpg);}
-    &__rushes {background-image:url(../imgs/hero_narrow_img_rushes_lrg.jpg);}
-    &__bowditch {background-image:url(../imgs/hero_narrow_img_bowditch_lrg.jpg);}
-    &__wedmore {background-image:url(../imgs/hero_narrow_img_wedmore_lrg.jpg);}
-    &__harwood {background-image:url(../imgs/hero_narrow_img_harwood_lrg.jpg);}
-    &__burroughs {background-image:url(../imgs/hero_narrow_img_burroughs_lrg.jpg);}
+    &--drummonds {background-image:url(../imgs/hero_narrow_img_drummonds_lrg.jpg);}
+    &--rushes {background-image:url(../imgs/hero_narrow_img_rushes_lrg.jpg);}
+    &--bowditch {background-image:url(../imgs/hero_narrow_img_bowditch_lrg.jpg);}
+    &--wedmore {background-image:url(../imgs/hero_narrow_img_wedmore_lrg.jpg);}
+    &--harwood {background-image:url(../imgs/hero_narrow_img_harwood_lrg.jpg);}
+    &--burroughs {background-image:url(../imgs/hero_narrow_img_burroughs_lrg.jpg);}
     
     &__text-box {
         width: 80%;
@@ -33,7 +33,7 @@
         left: 3rem;
         line-height: normal;
         font-size: 2rem;
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             font-size: 3rem;
         }
     }

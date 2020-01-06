@@ -11,8 +11,6 @@ $breakpoint arguement choices:
 - tab-land
 - big-desktop
 
-ORDER: Base + typography > general layout + grid > page layout > components
-
 1em = 16px
 */
 @keyframes moveInBottom {
@@ -33,7 +31,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     opacity: 1;
     transform: translate(0); } }
 
-/* reset for different browsers - normalize and reset not really needed anymore */
+/* reset for different browsers*/
 *,
 *::after,
 *::before {
@@ -42,20 +40,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
   /* better to inherit this from body so it's more future proof and is the standard approach */
   box-sizing: inherit; }
 
-/* Needs to be % so that it doesn't overide the browser default size. */
-/* this would mean users wouldn't be able to zoom in */
-/* font-size: 10px; */
 /* this defines what 1rem is*/
-.bgred {
-  background: red; }
-
-.bggreen {
-  background: green; }
-
-.bgblue {
-  background: blue; }
-
 html {
+  /* needs to be % so that it doesn't overide the browser default size. */
+  /* this would mean users wouldn't be able to zoom in */
+  /* font-size: 10px; */
+  /* this defines what 1rem is*/
   font-size: 62.5%; }
   @media only screen and (min-width: 112.5em) {
     html {
@@ -67,30 +57,6 @@ body {
   width: 100%;
   margin: 0 auto; }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  position: relative; }
-  a.contact {
-    margin-bottom: 1.6rem;
-    font-size: 1.6rem;
-    display: block; }
-    a.contact--small-marg-bottom {
-      font-size: 1.6rem; }
-      a.contact--small-marg-bottom:not(:last-child) {
-        margin-bottom: 0.3rem; }
-
-.generic-page {
-  padding: 10rem 0rem 0rem; }
-
-a:hover {
-  color: inherit;
-  right: 0;
-  text-decoration: none; }
-
-.hide {
-  display: none; }
-
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -100,46 +66,35 @@ body {
 p {
   font-size: 1.6rem; }
 
-.site-heading {
+.homepage-heading {
   /* occasionally get wobble on animation. not known why but this is fixes it, */
   /* this hides the back part of an element when we transform it */
   backface-visibility: hidden;
   margin-bottom: 2rem; }
-  .site-heading--main {
-    display: block;
-    font-size: 4rem;
-    line-height: normal;
-    font-weight: 400;
-    animation-name: moveInBottom;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; }
-    @media only screen and (min-width: 56.25em) {
-      .site-heading--main {
-        font-size: 8rem; } }
-  .site-heading--sub {
+  .homepage-heading--main {
     display: block;
     font-size: 4rem;
     line-height: normal;
     font-weight: 400;
     animation: moveInBottom 1s ease-out; }
     @media only screen and (min-width: 56.25em) {
-      .site-heading--sub {
+      .homepage-heading--main {
         font-size: 8rem; } }
-  .site-heading__paragraph {
+  .homepage-heading__paragraph {
     width: 100%;
     padding: 0rem 1rem 1rem 0;
     font-size: 1.6rem;
     line-height: normal;
     animation: moveInBottom 1s ease-out; }
-    .site-heading__paragraph:not(:last-child) {
+    .homepage-heading__paragraph:not(:last-child) {
       margin-bottom: 1.6rem; }
     @media only screen and (min-width: 56.25em) {
-      .site-heading__paragraph {
+      .homepage-heading__paragraph {
         width: 70%;
         font-size: 2.2rem;
         line-height: 2.8rem; } }
     @media only screen and (min-width: 75em) {
-      .site-heading__paragraph {
+      .homepage-heading__paragraph {
         width: 40%; } }
 
 .heading-primary, .heading-secondary,
@@ -150,13 +105,9 @@ p {
   display: inline-block;
   letter-spacing: 2px;
   line-height: normal; }
-
-.heading-primary {
-  margin: 2rem 0;
-  font-size: 3.25rem; }
-  .heading-primary--border-bottom {
+  .heading-primary--border-bottom, .heading-secondary--border-bottom {
     position: relative; }
-    .heading-primary--border-bottom:after {
+    .heading-primary--border-bottom:after, .heading-secondary--border-bottom:after {
       border-color: #3ab54a;
       border-radius: 1em;
       border-top: 0.1em solid #3ab54a;
@@ -166,24 +117,16 @@ p {
       bottom: -14px;
       left: 0;
       right: 20%; }
+
+.heading-primary {
+  margin: 2rem 0;
+  font-size: 3.5rem; }
   @media only screen and (min-width: 56.25em) {
     .heading-primary {
       font-size: 4rem; } }
 
 .heading-secondary {
   font-size: 3.25rem; }
-  .heading-secondary--border-bottom {
-    position: relative; }
-    .heading-secondary--border-bottom:after {
-      border-color: #3ab54a;
-      border-radius: 1em;
-      border-top: 0.1em solid #3ab54a;
-      content: "";
-      position: absolute;
-      right: 100%;
-      bottom: -14px;
-      left: 0;
-      right: 20%; }
 
 .heading-tertiary {
   font-size: 2.5rem;
@@ -206,6 +149,27 @@ p {
     font-size: 1.6rem; }
     .paragraph--small-marg-bottom:not(:last-child) {
       margin-bottom: 0.3rem; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  position: relative; }
+  a.contact {
+    margin-bottom: 1.6rem;
+    font-size: 1.6rem;
+    display: block; }
+    a.contact--small-marg-bottom {
+      font-size: 1.6rem; }
+      a.contact--small-marg-bottom:not(:last-child) {
+        margin-bottom: 0.3rem; }
+
+a:hover {
+  color: inherit;
+  right: 0;
+  text-decoration: none; }
+
+.generic-page {
+  padding: 10rem 0rem 0rem; }
 
 .row {
   max-width: 100%;
@@ -313,7 +277,7 @@ p {
       .row .col-3-of-4.small-grid {
         width: calc(3 * ((100% - 3 * 2rem) / 4) + 2 * 2rem); } }
 
-.header {
+.homepage-header {
   height: 100vh;
   position: relative;
   background-attachment: scroll;
@@ -323,7 +287,7 @@ p {
   background-size: cover;
   color: #fff;
   transition: all 0.5s; }
-  .header__text-box {
+  .homepage-header__text-box {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -331,7 +295,7 @@ p {
     transform: translate(-50%, -50%);
     width: 75%; }
     @media only screen and (min-width: 56.25em) {
-      .header__text-box {
+      .homepage-header__text-box {
         width: initial;
         top: 35%;
         left: 4rem;
@@ -342,55 +306,45 @@ p {
   background-color: black;
   padding: 10rem 0;
   font-size: 1.4rem;
-  color: #777;
+  color: #bbb;
   position: relative;
-  top: 5rem; }
+  top: 5rem;
+  text-align: center; }
   @media only screen and (min-width: 56.25em) {
     .footer {
       padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
-    margin-bottom: 8rem; }
+    margin-bottom: 2rem; }
     @media only screen and (min-width: 56.25em) {
       .footer__logo-box {
-        margin-bottom: 6rem; } }
+        margin-bottom: 3rem; } }
   .footer__logo {
     width: 8rem;
     height: auto; }
+  .footer__title {
+    font-weight: normal;
+    font-size: 2.2rem; }
   .footer__navigation {
     border-top: 1px solid #777;
     padding-top: 2rem;
-    display: inline-block; }
+    display: inline-block;
+    width: 70%; }
     @media only screen and (min-width: 56.25em) {
       .footer__navigation {
-        width: 100%;
-        text-align: center; } }
-  .footer__list {
-    list-style: none; }
+        width: 50%; } }
   .footer__item {
-    display: inline-block; }
+    display: inline-block;
+    font-size: 1.8rem; }
     .footer__item:not(:last-child) {
       margin-right: 1.5rem; }
   .footer__link:link, .footer__link:visited {
-    color: #777;
-    background-color: #777;
     text-decoration: none;
-    text-transform: uppercase;
     display: inline-block;
-    transition: all .2s; }
-  .footer__link:hover, .footer__link:active {
-    color: #55c57a;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-    transform: rotate(5deg) scale(1.3); }
-  .footer__copyright {
-    border-top: 1px solid #777;
-    padding-top: 2rem;
-    width: 80%;
-    float: right; }
-    @media only screen and (min-width: 56.25em) {
-      .footer__copyright {
-        width: 100%;
-        float: none; } }
+    transition: all 0.8s; }
+  .footer__link:hover {
+    color: #3ab54a;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
 
 body.is-open {
   height: 100vh; }
@@ -581,25 +535,25 @@ body.is-open {
   margin-bottom: 1rem;
   color: #fff;
   transition: all 0.5s; }
-  .fullwidth-bgheader__about {
+  .fullwidth-bgheader--about {
     background-image: url(../imgs/hero_narrow_img_about_lrg.jpg); }
-  .fullwidth-bgheader__calvert {
+  .fullwidth-bgheader--calvert {
     background-image: url(../imgs/hero_narrow_img_calvert.jpg); }
-  .fullwidth-bgheader__arkesden {
+  .fullwidth-bgheader--arkesden {
     background-image: url(../imgs/hero_narrow_img_arkesden.jpg); }
-  .fullwidth-bgheader__hilltop {
+  .fullwidth-bgheader--hilltop {
     background-image: url(../imgs/hero_narrow_img_hilltop.jpg); }
-  .fullwidth-bgheader__drummonds {
+  .fullwidth-bgheader--drummonds {
     background-image: url(../imgs/hero_narrow_img_drummonds_lrg.jpg); }
-  .fullwidth-bgheader__rushes {
+  .fullwidth-bgheader--rushes {
     background-image: url(../imgs/hero_narrow_img_rushes_lrg.jpg); }
-  .fullwidth-bgheader__bowditch {
+  .fullwidth-bgheader--bowditch {
     background-image: url(../imgs/hero_narrow_img_bowditch_lrg.jpg); }
-  .fullwidth-bgheader__wedmore {
+  .fullwidth-bgheader--wedmore {
     background-image: url(../imgs/hero_narrow_img_wedmore_lrg.jpg); }
-  .fullwidth-bgheader__harwood {
+  .fullwidth-bgheader--harwood {
     background-image: url(../imgs/hero_narrow_img_harwood_lrg.jpg); }
-  .fullwidth-bgheader__burroughs {
+  .fullwidth-bgheader--burroughs {
     background-image: url(../imgs/hero_narrow_img_burroughs_lrg.jpg); }
   .fullwidth-bgheader__text-box {
     width: 80%;
@@ -611,11 +565,6 @@ body.is-open {
     @media only screen and (min-width: 56.25em) {
       .fullwidth-bgheader__text-box {
         font-size: 3rem; } }
-
-.featured-properties {
-  padding: 4rem 0 4rem; }
-  .featured-properties__image {
-    width: 100%; }
 
 .angle-divider {
   min-height: 225px;
@@ -634,7 +583,6 @@ body.is-open {
       background-attachment: fixed; } }
   .angle-divider__content {
     font-size: 1.8rem;
-    font-weight: normal;
     color: #000;
     text-align: center;
     padding-bottom: 3rem;
@@ -665,99 +613,90 @@ body.is-open {
         top: 11.5rem; } }
 
 /* Slideshow container */
-.slideshow-container {
+.slideshow__container {
   position: relative;
-  margin: auto;
-  /* Next & previous buttons */
-  /* Position the "next button" to the right */
-  /* On hover, add a black background color with a little bit see-through */ }
-  .slideshow-container .prev-next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    -webkit-user-select: none;
-    /* Safari 3.1+ */
-    -moz-user-select: none;
-    /* Firefox 2+ */
-    -ms-user-select: none;
-    /* IE 10+ */
-    user-select: none;
-    /* Standard syntax */
-    display: flex;
-    height: 5rem;
-    width: 5rem;
-    align-items: center;
-    padding: 1rem; }
-  .slideshow-container .prev {
+  margin: auto; }
+
+.slideshow__names {
+  display: none; }
+  @media only screen and (min-width: 56.25em) {
+    .slideshow__names {
+      display: block; } }
+
+/* Next & previous buttons */
+.prevnext-buttons {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+  /* Safari 3.1+ */
+  -moz-user-select: none;
+  /* Firefox 2+ */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Standard syntax */
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem; }
+  .prevnext-buttons__prev {
     left: 0;
     border-radius: 0 5px 5px 0;
     text-align: left;
     background: rgba(0, 0, 0, 0.3); }
-  .slideshow-container .next {
+    .prevnext-buttons__prev:hover {
+      background: rgba(0, 0, 0, 0.8); }
+  .prevnext-buttons__next {
     right: 0;
     border-radius: 5px 0 0 5px;
     text-align: right;
     background: rgba(0, 0, 0, 0.3); }
-  .slideshow-container .prev:hover, .slideshow-container .next:hover {
-    background: rgba(0, 0, 0, 0.8); }
+    .prevnext-buttons__next:hover {
+      background: rgba(0, 0, 0, 0.8); }
 
-.mySlides {
-  display: none;
-  /* display: block; */
-  /* position: absolute; */
-  /* transition: all 10.8s;   */
-  /* top: 0; */ }
-
-.portfolio__names {
+.slides {
   display: none; }
-  @media only screen and (min-width: 56.25em) {
-    .portfolio__names {
-      display: block; } }
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 1.6rem;
-  padding: 8px 12px;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 0px; }
-  @media only screen and (min-width: 56.25em) {
-    .text {
-      font-size: 2rem; } }
-  .text__mob-button {
-    display: inline-block; }
+  .slides__text {
+    color: #f2f2f2;
+    font-size: 1.8rem;
+    padding: 8px 12px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0px; }
     @media only screen and (min-width: 56.25em) {
-      .text__mob-button {
-        display: none; } }
-
-/* Number text (1/3 etc) */
-.number-text {
-  color: #f2f2f2;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-  font-size: 1.6rem; }
-  @media only screen and (min-width: 56.25em) {
-    .number-text {
-      font-size: 2rem; } }
-
-.slideshow-link {
-  position: relative; }
+      .slides__text {
+        font-size: 2.4rem; } }
+    .slides__text--mob {
+      display: inline-block; }
+      @media only screen and (min-width: 56.25em) {
+        .slides__text--mob {
+          display: none; } }
+  .slides__slidenumber {
+    display: none; }
+    @media only screen and (min-width: 56.25em) {
+      .slides__slidenumber {
+        display: inline-block;
+        color: #f2f2f2;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+        font-size: 2.2rem; } }
 
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 1.5rem;
+  width: 1.5rem;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
@@ -914,3 +853,7 @@ body.is-open {
 
 /***test****/
 /*Zoom In*/
+.featured-properties {
+  padding: 4rem 0 4rem; }
+  .featured-properties__image {
+    width: 100%; }

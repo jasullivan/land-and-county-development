@@ -1,5 +1,5 @@
-$content-width: 1000px;
-$breakpoint: 799px;
+// $content-width: 1000px;
+// $breakpoint: 799px;
 
 // $nav-height: 70px;
 $nav-scroll-background: rgba(0,0,0,0.8);
@@ -11,10 +11,7 @@ $link-hover-color: #3ab54a;
 $color-white: #fff;
 $color-black: #000;
 
-
-
-
-//colors
+//colors -don't think need these
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
@@ -27,15 +24,14 @@ $color-tertiary-dark: #5643fa;
 
 $color-dark-grey: #444;
 $color-grey: #777;
-$color-light-grey: #f7f7f7;
+$color-light-grey: #bbb;
 $color-vlight-grey: #eee;
 $color-white: #fff;
 $color-black: #000;
-
+//colors -don't think need these
 
 // FONT
 $default-font-size: 1.6rem;
-
 
 // GRID
 $grid-width: 140rem;

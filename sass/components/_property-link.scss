@@ -18,13 +18,13 @@
     }
     &--desk {
         display: none;
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             display: flex;
         }
     }
     &--mob {
         display: flex;
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             display: none;
         }
     }

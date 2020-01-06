@@ -7,18 +7,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image:url(../imgs/parallax-house.jpg); 
-    margin-bottom: 3rem;      
-    @include respond(tab-port) {
-        // min-height: 300px;
-    }
-    @include respond(tab-land) {
+    margin-bottom: 3rem; 
+    @include respond(desktop) {
         margin-bottom: 4rem;  
         min-height: 300px;
         background-attachment: fixed;
     }
     &__content {
         font-size: 1.8rem;
-        font-weight: normal;
+        // font-weight: normal;
         color: $color-black;
         text-align: center;
         padding-bottom: 3rem;
@@ -27,7 +24,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 80%;
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             font-size: 2.4rem;
             width: 70%;
             padding-bottom: 5.5rem;
@@ -38,13 +35,13 @@
         max-width: 230rem;
         position: absolute;
         top: 10.5rem;
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             top: 8.5rem;
         }
-        @include respond(tab-land) {
+        @include respond(desktop) {
             top: 15.5rem;
         }
-         @include respond(desktop) {
+         @include respond(big-desktop) {
             top: 11.5rem;
         }
         z-index: 3;

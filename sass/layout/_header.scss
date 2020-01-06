@@ -1,4 +1,4 @@
-.header {
+.homepage-header {
     height: 100vh;
     position: relative;
     background-attachment: scroll;
@@ -15,7 +15,7 @@
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         width: 75%;
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             width: initial;
             top: 35%;
             left: 4rem;

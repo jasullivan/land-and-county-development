@@ -12,7 +12,7 @@ body.is-open {
     color: $nav-font-color;
     &--dark {
         color: $color-white;
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             color: $nav-font-color-dark; 
         }
     }
@@ -32,12 +32,11 @@ body.is-open {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-
     align-items: center;
     justify-content: flex-start;
     background: $nav-scroll-background;
     animation: moveInTop 0.5s ease-out;
-    @include respond(tab-port) {
+    @include respond(tab-land) {
         background: none;
         position: absolute;
         width: 20rem;
@@ -54,7 +53,7 @@ body.is-open {
         right: 5rem;
         top: 2rem;
         width: 40px;
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             display: none;
         }
         &:hover {
@@ -123,7 +122,7 @@ body.is-open {
         transition: 0.2s ease-out;
         // transition: transform 0.5s ease-out;
     }
-    @include respond(tab-port) {
+    @include respond(tab-land) {
         position: absolute;
         height: 8rem;
         width: 56rem;
@@ -138,7 +137,7 @@ body.is-open {
         text-align: center;
         width: 100vw;
         list-style: none;
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             // width: 100%;
             display: flex;
             align-items: center;
@@ -146,7 +145,7 @@ body.is-open {
             padding-right: 3rem;
         }
         li {
-            @include respond(tab-port) {
+            @include respond(tab-land) {
                 float: left;
                 margin-right: 2rem;
             }
@@ -196,7 +195,7 @@ body.is-open {
     width: 100vw;
 }
 .pre-sticky {
-    @include respond(tab-port) {
+    @include respond(tab-land) {
         position: fixed;
         height: 8rem;
         width: 100%;
@@ -207,7 +206,7 @@ body.is-open {
     }
 }
 .sticky {
-    @include respond(tab-port) {
+    @include respond(tab-land) {
         transform: translateY(10rem);
         color: $color-white;
     }

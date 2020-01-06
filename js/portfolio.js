@@ -6,10 +6,10 @@ showSlides(slideIndex);
 //     showSlides(slideIndex += n);
 //     console.log(n)
 // }
-let prevNextButtons = document.getElementsByClassName("prev-next");
+let prevNextButtons = document.getElementsByClassName("prevnext-buttons");
 for (var i = 0; i < prevNextButtons.length; i++) {
     prevNextButtons[i].addEventListener("click", function (e) {
-        if (this.classList.contains('prev')) {
+        if (this.classList.contains('prevnext-buttons__prev')) {
             showSlides(slideIndex += -1);
         }
         else {
@@ -43,7 +43,7 @@ for (var y = 0; y < dots.length; y++) {
 // slide functionality
 function showSlides(n) {
     let i;
-    const slides = document.getElementsByClassName("mySlides");
+    const slides = document.getElementsByClassName("slides");
     const dots = document.getElementsByClassName("dot");
     const imgs = document.getElementsByClassName("portfolio__link");
 

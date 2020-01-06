@@ -4,10 +4,10 @@ body {
     line-height: 1.7;
     color: $color-dark-grey;
 }
-
 p {font-size: $default-font-size;}
-// site-heading HOMEPAGE ONLY 
-.site-heading {
+
+// HOMEPAGE SITE HEADING ONLY 
+.homepage-heading {
     /* occasionally get wobble on animation. not known why but this is fixes it, */
     /* this hides the back part of an element when we transform it */
     backface-visibility: hidden;
@@ -17,22 +17,10 @@ p {font-size: $default-font-size;}
         font-size: 4rem;
         line-height: normal;
         font-weight: 400;
-        animation-name: moveInBottom;
-        animation-duration: 1s;
-        animation-timing-function: ease-out;
-        @include respond(tab-port) {
-            font-size: 8rem;
-        }
-    }
-    &--sub {
-        display: block;
-        font-size: 4rem;
-        @include respond(tab-port) {
-            font-size: 8rem;
-        }
-        line-height: normal;
-        font-weight: 400;
         animation: moveInBottom 1s ease-out;
+        @include respond(tab-land) {
+            font-size: 8rem;
+        }
     }
     &__paragraph {
         width: 100%;
@@ -43,39 +31,37 @@ p {font-size: $default-font-size;}
         &:not(:last-child) {
             margin-bottom: 1.6rem;
         }
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             width: 70%;
             font-size: 2.2rem;
             line-height: 2.8rem;
         }
-        @include respond(tab-land) {
+        @include respond(desktop) {
             width: 40%;
         }
     }
 }
-// site-heading HOMEPAGE ONLY ENDS
+// HOMEPAGE SITE HEADING ONLY ENDS
 
 .heading-primary, .heading-secondary,
 .heading-tertiary {
     font-weight: 700;
-    // color:$color-dark-grey;
 }
 .heading-primary, .heading-secondary {
     display: inline-block;
     letter-spacing: 2px;
     line-height: normal;
+    @include border-bottom; 
 }
 .heading-primary {
     margin: 2rem 0;
-    font-size: 3.25rem;
-    @include border-bottom;  
-    @include respond(tab-port) {
+    font-size: 3.5rem; 
+    @include respond(tab-land) {
         font-size: 4rem;
     }
 }
 .heading-secondary {
-    font-size: 3.25rem;
-    @include border-bottom;  
+    font-size: 3.25rem; 
 }
 .heading-tertiary {
     font-size: 2.5rem;
@@ -89,7 +75,7 @@ p {font-size: $default-font-size;}
 }
 .paragraph {
     font-size: $default-font-size;
-    @include respond(tab-port) {
+    @include respond(tab-land) {
         font-size: 1.8rem;  
     }
     &:not(:last-child) {
@@ -101,4 +87,28 @@ p {font-size: $default-font-size;}
             margin-bottom: 0.3rem;
         }
     }
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    &.contact {
+        margin-bottom: 1.6rem;
+        font-size: $default-font-size;
+        display: block;
+        &--small-marg-bottom {
+            font-size: $default-font-size;
+            &:not(:last-child) {
+                margin-bottom: 0.3rem;
+            }
+        }
+    }
+}
+a:hover {
+  color: inherit;
+  right: 0;
+  text-decoration: none;
+}
+.generic-page {
+    padding: 10rem 0rem 0rem;
 }
