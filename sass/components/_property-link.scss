@@ -18,18 +18,18 @@
     }
     &--desk {
         display: none;
-        @include respond(tab-land) {
+        @include respond(desktop) {
             display: flex;
         }
     }
     &--mob {
         display: flex;
-        @include respond(tab-land) {
+        @include respond(desktop) {
             display: none;
         }
     }
     &:hover .property-link__arrow {
-        stroke: $link-hover-color;
+        stroke: $primary-color;
         -webkit-transform: translate(30%, 0%);
         -ms-transform: translate(30%, 0%);
         transform: translate(30%, 0%);

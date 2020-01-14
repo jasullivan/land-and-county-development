@@ -50,7 +50,7 @@
             transition: all 0.8s;
         }
         &:hover {
-            color: $link-hover-color;
+            color: $primary-color;
             box-shadow: 0 1rem 2rem rgba($color-black, .4);
         }
     }

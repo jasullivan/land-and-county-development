@@ -138,13 +138,6 @@
                 width: calc((100% - 3 * #{$gutter-sml-horizontal}) / 4);
             } 
         }
-        &--featured-properties {
-            width: 100%;
-            @include respond(desktop) {    
-                width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
-            }  
-        }
-        
     }
     .col-2-of-4 {
         width: 100%;
@@ -167,12 +160,68 @@
                 width: calc(3 * ((100% - 3 * #{$gutter-sml-horizontal}) / 4) + 2 * #{$gutter-sml-horizontal});
             } 
         }
-        &--featured-properties {
-            width: 100%;
-            @include respond(desktop) {    
-                width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
-            }  
-        }
     }
 
+    // large
+    .col-lrg-1-of-2 {
+        width: 100%;
+        @include respond(desktop) {
+            width: calc((100% - #{$gutter-horizontal}) / 2);
+        }
+    }
+    .col-lrg-1-of-3 {
+        width: 100%;
+        @include respond(desktop) {
+            width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+        }
+        &--sml-hrz-gutter {
+           @include respond(desktop) {
+                width: calc((100% - 2 * #{$gutter-sml-horizontal}) / 3);
+            } 
+        }
+    }
+    .col-lrg-2-of-3 {
+        width: 100%;
+        @include respond(desktop) {
+            width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+        }
+        &--sml-hrz-gutter {
+           @include respond(desktop) {
+                width: calc(2 * ((100% - 2 * #{$gutter-sml-horizontal}) / 3) + #{$gutter-sml-horizontal});
+            } 
+        }
+    }
+    .col-lrg-1-of-4 {
+        width: 100%;
+        @include respond(desktop) {    
+            width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+        }
+        &--sml-hrz-gutter {
+           @include respond(desktop) {
+                width: calc((100% - 3 * #{$gutter-sml-horizontal}) / 4);
+            } 
+        }
+    }
+    .col-lrg-2-of-4 {
+        width: 100%;
+        @include respond(desktop) {
+            width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+        }
+        &--sml-hrz-gutter {
+           @include respond(desktop) {
+                width: calc(2 * ((100% - 3 * #{$gutter-sml-horizontal}) / 4) + #{$gutter-sml-horizontal});
+            } 
+        }
+    }
+    .col-lrg-3-of-4 {
+        width: 100%;
+        @include respond(desktop) {
+            width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+        }
+        &--sml-hrz-gutter {
+           @include respond(desktop) {
+                width: calc(3 * ((100% - 3 * #{$gutter-sml-horizontal}) / 4) + 2 * #{$gutter-sml-horizontal});
+            } 
+        }
+    }
 }

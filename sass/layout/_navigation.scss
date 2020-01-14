@@ -153,14 +153,14 @@ body.is-open {
     }
     
     &__link:hover:after {
-        border-color: $link-hover-color;
+        border-color: $primary-color;
         right: 15px;
     }
     
 
     &__link:after {
         border-radius: 1em;
-        border-top: .1em solid $link-hover-color;
+        border-top: .1em solid $primary-color;
         content: "";
         position: absolute;
         right: 100%;
@@ -170,10 +170,10 @@ body.is-open {
     }
     &__link {
         &.chosen:after {
-            border-color: $link-hover-color;
+            border-color: $primary-color;
             right: 15px;
             border-radius: 1em;
-            border-top: .1em solid $link-hover-color;
+            border-top: .1em solid $primary-color;
             content: "";
             position: absolute;
             bottom: -0.1em;
