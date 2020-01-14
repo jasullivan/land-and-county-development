@@ -2,14 +2,9 @@
 window.onscroll = function () { stickyNav() };
 
 const navBar = document.querySelector(".navigation");
-const logo = document.querySelector(".nav-icons__logo"); 
-// const sticky = navBar.offsetTop + 100;
+// const logo = document.querySelector(".nav-icons__logo"); 
 const navScrollMarker = document.getElementById('navScrollMarker');
-
-
 const sticky = navScrollMarker.offsetTop - 150;
-
-
 const navMenu = document.querySelector(".nav-icons__menu");
 const navWrap = document.querySelector(".nav-wrap");
 const body = document.querySelector('body');
@@ -27,12 +22,14 @@ function stickyNav() {
     }
 }
 
+// menu icon
 navMenu.addEventListener('click', function() {
     this.classList.toggle("nav-icons__menu--open");
     navBar.classList.toggle("show-menu");
     body.classList.toggle('is-open');
 })
 
+// remove mob nav if window size larger than 900
 document.addEventListener("DOMContentLoaded", function(e) {
     if (window.innerWidth > 900) {
         navBar.classList.remove("show-menu");
@@ -56,60 +53,6 @@ document.addEventListener("DOMContentLoaded", function(e) {
 });
 // sticky nav and mob menu ends
 
-// portfolio accordion
-// var acc = document.getElementsByClassName("portfolio__link");
-// var i;
-// for (i = 0; i < acc.length; i++) {
-//     acc[i].addEventListener("click", function () {
-//         this.classList.toggle("active");
-//         var panel = this.nextElementSibling;
-//         if (panel.style.maxHeight) {
-//             panel.style.maxHeight = null;
-//         } else {
-//             panel.style.maxHeight = panel.scrollHeight + "px";
-//         }
-//     });
-// }
-
-
-// function myFunction(imgs) {
-//     var expandImg = document.getElementById("expandedImg");
-    // var imgText = document.getElementById("imgtext");
-    // imgText.innerHTML = imgs.alt;
-//     expandImg.parentElement.style.display = "block";
-//     console.log(imgs);
-//     if(imgs.classList.contains('portfolio__one')) {
-//         expandImg.src = "imgs/portfolio_harwood.jpg";
-//     } else if (imgs.classList.contains('portfolio__two')) {
-//         expandImg.src = "imgs/portfolio_clavering.jpg";
-//     } else {
-//         expandImg.src = "imgs/portfolio_hilltop.jpg";
-//     }
-// }
-
-
-// hover pics in portfolio
-// var hoverPics = document.getElementsByClassName("portfolio__link");
-// for (var i = 0; i < hoverPics.length; i++) {
-//     hoverPics[i].addEventListener("mouseover", function (e) {
-//         var expandImg = document.getElementById("expandedImg");
-        // var imgText = document.getElementById("imgtext");
-        // imgText.innerHTML = imgs.alt;
-        // expandImg.parentElement.style.display = "block";
-        // expandImg.parentElement.style.opacity = "1";
-        // expandImg.src = "imgs/portfolio_harwood.jpg";
-//         console.log(expandImg);
-//         if (this.classList.contains('portfolio__one')) {
-//             expandImg.src = "imgs/portfolio_harwood.jpg";
-//         } else if (this.classList.contains('portfolio__two')) {
-//             expandImg.src = "imgs/portfolio_clavering.jpg";
-//         } else {
-//             expandImg.src = "imgs/portfolio_hilltop.jpg";
-//         }
-//     })
-// }
-// hover pics in portfolio
-
 // arrow link from home page 
 let propertyArrowLinks = document.querySelectorAll('.property-link');
 for (let i = 0; i < propertyArrowLinks.length; i++) {
@@ -118,23 +61,7 @@ for (let i = 0; i < propertyArrowLinks.length; i++) {
         this.classList.add('moveRight')
     });
 }
-
-/*******************************
-// fade in
-********************************/
-// window.onload = function () {
-//     setTimeout(function () {
-        //Re-enable mouse/touch events on the #next button
-        // document.querySelector(".fadeLoad").style.pointerEvents = 'auto';
-
-        //Show the #.fadeLoad button
-        //Since opacity style is transitioned, the opacity change will automatically trigger the transition.
-//         document.querySelector(".fadeLoad").style.opacity = 1;
-//     }, 100);
-// };
-/*******************************
-// fade in ends
-********************************/
+// arrow link from home page ends
 
 
 

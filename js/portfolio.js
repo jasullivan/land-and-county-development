@@ -20,10 +20,6 @@ for (var i = 0; i < prevNextButtons.length; i++) {
 // prevNext functionality
 
 // dot functionality
-
-// function currentSlide(n) {
-//     showSlides(slideIndex = n);
-// }
 let dots = document.getElementsByClassName("dot");
 for (var y = 0; y < dots.length; y++) {
     dots[y].addEventListener("click", function (e) {
@@ -42,18 +38,17 @@ for (var y = 0; y < dots.length; y++) {
 
 // slide functionality
 function showSlides(n) {
-    let i;
     const slides = document.getElementsByClassName("slides");
     const dots = document.getElementsByClassName("dot");
     const imgs = document.getElementsByClassName("portfolio__link");
 
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
         slides[i].style.opacity = 0;
     }
-    for (i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex - 1].style.display = "block";
