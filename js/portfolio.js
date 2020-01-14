@@ -20,7 +20,7 @@ for (var i = 0; i < prevNextButtons.length; i++) {
 // prevNext functionality
 
 // dot functionality
-let dots = document.getElementsByClassName("dot");
+let dots = document.getElementsByClassName("slideshow__dot");
 for (var y = 0; y < dots.length; y++) {
     dots[y].addEventListener("click", function (e) {
         console.log('clicked')
@@ -39,8 +39,8 @@ for (var y = 0; y < dots.length; y++) {
 // slide functionality
 function showSlides(n) {
     const slides = document.getElementsByClassName("slides");
-    const dots = document.getElementsByClassName("dot");
-    const imgs = document.getElementsByClassName("portfolio__link");
+    const dots = document.getElementsByClassName("slideshow__dot");
+    const imgs = document.getElementsByClassName("slideshow-link");
 
     if (n > slides.length) { slideIndex = 1 }
     if (n < 1) { slideIndex = slides.length }
@@ -56,17 +56,17 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 
     if ((dots[0]).classList.contains('active')) {
-        imgs[0].classList.add("moveRight")
-        imgs[1].classList.remove("moveRight")
-        imgs[2].classList.remove("moveRight")
+        imgs[0].classList.add("slideshow-link--moveRight")
+        imgs[1].classList.remove("slideshow-link--moveRight")
+        imgs[2].classList.remove("slideshow-link--moveRight")
     } else if ((dots[1]).classList.contains('active')) {
-        imgs[1].classList.add("moveRight")
-        imgs[0].classList.remove("moveRight")
-        imgs[2].classList.remove("moveRight")
+        imgs[1].classList.add("slideshow-link--moveRight")
+        imgs[0].classList.remove("slideshow-link--moveRight")
+        imgs[2].classList.remove("slideshow-link--moveRight")
     } else {
-        imgs[2].classList.add("moveRight")
-        imgs[0].classList.remove("moveRight")
-        imgs[1].classList.remove("moveRight")
+        imgs[2].classList.add("slideshow-link--moveRight")
+        imgs[0].classList.remove("slideshow-link--moveRight")
+        imgs[1].classList.remove("slideshow-link--moveRight")
     }
 }
 // slide functionality

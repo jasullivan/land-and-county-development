@@ -21,7 +21,17 @@
         }
     }
 }
-
+@mixin slideshow-buttons-hover-col {
+    background: rgba(0,0,0,0.3);
+    &:hover {
+        background: rgba(0,0,0,0.8);
+    }
+}
+@mixin moveRight {
+   -webkit-transform: translate(40%, 0%);
+    -ms-transform: translate(40%, 0%);
+    transform: translate(40%, 0%);
+}
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone

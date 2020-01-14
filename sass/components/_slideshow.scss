@@ -1,60 +1,70 @@
 /* Slideshow container */
 .slideshow {
-  &__container {
-    position: relative;
-    margin: auto;
-  }
+  // property names to the left
   &__names {
     display: none;
     @include respond(tab-land) {
       display: block;
     }
   }
-}
-  /* Next & previous buttons */
-.prevnext-buttons {
+  // property images
+  &__container {
+    position: relative;
+    margin: auto;
+  }
+  // dots
+  &__dots {
+    text-align: center;
+    margin: 2rem 0 0;
+  }
+  &__dot {
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 1.8rem;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    -webkit-user-select: none; /* Safari 3.1+ */
-    -moz-user-select: none; /* Firefox 2+ */
-    -ms-user-select: none; /* IE 10+ */
-    user-select: none; /* Standard syntax */
-    display: flex;
-    align-items: center;
-    height: 5rem;
-    width: 5rem;
-    padding: 1rem;
-    &__prev {
-        left: 0;
-        border-radius:  0 5px 5px 0;
-        text-align: left;
-        background: rgba(0,0,0,0.3);
-        &:hover {
-          background: rgba(0,0,0,0.8);
-        }
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0 2px;
+    background-color: $color-light-grey;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    &:hover {
+      background-color: $color-grey;
     }
-    &__next {
-        right: 0;
-        border-radius: 5px 0 0 5px;
-        text-align: right;
-        background: rgba(0,0,0,0.3);
-        &:hover {
-          background: rgba(0,0,0,0.8);
-        }
+    &.active {
+      background-color: $color-grey;
     }
   }
+}
+/* Individual property links */
+.slideshow-link {
+  font-weight: normal;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0rem 2rem 2rem 0;
+  line-height: normal;
+  color: $color-dark-grey;
+  transition: all 1s;
+  &:hover p {
+      color: $color-grey;
+      transition: all 1s;
+  }
+  &--moveRight {
+      p {color: $color-grey;}
+      @include moveRight();
+  }
+  h3 {
+      font-weight: normal;
+      font-size: 2rem;
+      @include respond(tab-land) {
+          font-size: 2.25rem;
+      }
+  }
+}
+// individual slides
 .slides {
   display: none;
+  // property name on image slide
   &__text {
-    color: #f2f2f2;
+    color: $color-white;
     font-size: 1.8rem;
     padding: 8px 12px;
     position: absolute;
@@ -64,6 +74,7 @@
     @include respond(tab-land) {
       font-size: 2.4rem;
     }
+    // change text on mob
     &--mob {
       display: inline-block;
       @include respond(tab-land) {
@@ -71,11 +82,12 @@
       }
     }
   }
+  // slide number on image slide
   &__slidenumber {
     display: none;
     @include respond(tab-land) {
       display: inline-block;
-      color: #f2f2f2;
+      color: $color-white;
       padding: 8px 12px;
       position: absolute;
       top: 0;
@@ -83,68 +95,34 @@
     }
   }
 }
-// .slideshow-link {
-//   position: relative;
-// }
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 1.5rem;
-  width: 1.5rem;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+/* Next & previous buttons */
+.prevnext-buttons {
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+  transition: 0.6s ease;
+  &__prev {
+      left: 0;
+      border-radius:  0 5px 5px 0;
+      text-align: left;
+      @include slideshow-buttons-hover-col();
+  }
+  &__next {
+      right: 0;
+      border-radius: 5px 0 0 5px;
+      text-align: right;
+      @include slideshow-buttons-hover-col();
+  }
 }
-.active, .dot:hover {
-  background-color: #717171;
-}
-
 /* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 2s;
-  animation-name: fade;
-  animation-duration: 2s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .8} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .8} 
-  to {opacity: 1}
-}
-
-.left {
-    width: 30%;
-    display: inline-block;
-}
-.right {
-    width: 69%;
-    display: inline-block;
-}
-.wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-@media screen and (max-width: 700px) {
-  .wrap {   
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .left-side {
-    width:100%;
-  }
-  .right-side {
-    width:100%;
-  }
-}
-// new code for slider in portfolio
+.fade {animation: fade 2s ease-out;}
