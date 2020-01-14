@@ -27,10 +27,15 @@
         background: rgba(0,0,0,0.8);
     }
 }
-@mixin moveRight {
+@mixin moveRight40 {
    -webkit-transform: translate(40%, 0%);
     -ms-transform: translate(40%, 0%);
     transform: translate(40%, 0%);
+}
+@mixin moveRight30 {
+    -webkit-transform: translate(30%, 0%);
+    -ms-transform: translate(30%, 0%);
+    transform: translate(30%, 0%);
 }
 // MEDIA QUERY MANAGER
 /*

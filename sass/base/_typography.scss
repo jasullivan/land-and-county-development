@@ -93,6 +93,7 @@ a {
     text-decoration: none;
     color: inherit;
     position: relative;
+    line-height: normal;
     &.contact {
         margin-bottom: 1.6rem;
         font-size: $default-font-size;

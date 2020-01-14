@@ -30,8 +30,6 @@
     }
     &:hover .property-link__arrow {
         stroke: $primary-color;
-        -webkit-transform: translate(30%, 0%);
-        -ms-transform: translate(30%, 0%);
-        transform: translate(30%, 0%);
+        @include moveRight30();
     }
 }

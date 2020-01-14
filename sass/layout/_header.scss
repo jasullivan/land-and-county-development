@@ -3,9 +3,9 @@
     position: relative;
     background-attachment: scroll;
     background-position: top;
-    background-image:url(../imgs/hero_img_header.jpg);
     background-repeat:no-repeat;
     background-size:cover;
+    background-image:url(../imgs/hero_img_header.jpg);
     color: $color-white;
     transition: all 0.5s;
     &__text-box {
