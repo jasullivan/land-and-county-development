@@ -179,7 +179,7 @@ a:hover {
   right: 0;
   text-decoration: none; }
 
-.generic-page {
+.generic-page, .portfolio {
   padding: 10rem 0rem 0rem; }
 
 .row {
@@ -777,7 +777,8 @@ body.is-open {
     height: 3rem;
     transition: all 0.5s; }
   .property-link__text {
-    margin: 0rem 1rem 0rem 1.5rem; }
+    margin: 0rem 1rem 0rem 1.5rem;
+    font-size: 2rem; }
   .property-link--desk {
     display: none; }
     @media only screen and (min-width: 75em) {
@@ -811,9 +812,9 @@ body.is-open {
   .featured-properties__image {
     width: 100%; }
 
-ul {
+.content-list {
   width: 96%;
   margin-left: 4%;
   font-size: 1.6rem; }
-  ul li {
+  .content-list li {
     margin-bottom: 1rem; }
