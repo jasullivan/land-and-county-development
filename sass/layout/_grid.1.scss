@@ -1,75 +1,81 @@
 .row {
-    width: 100%;
+    max-width: 100%;
     padding: 0 3rem;
-    max-width: $grid-width;
-    margin: 0 auto;
+    // @include respond(tab-land) {
+    //     max-width: 50rem;
+    // }
+    @include respond(tab-land) {
+        max-width: $grid-width;
+        margin: 0 auto;
+    }
+
     @include clearfix;
+    // &--flex {
+    //     @include respond(tab-land) {
+    //         display: -webkit-box;
+    //         display: -ms-flexbox;
+    //         display: flex;
+    //     }
+    // }
     &:not(:last-child) {
         margin-bottom: $gutter-vertical-med;
         @include respond(tab-land) {            
             margin-bottom: $gutter-vertical-lrg;
         }
     }
-    &--med-ver-gutter {
-        &:not(:last-child) {
-            margin-bottom: $gutter-vertical-med;
-        }
-    }
-    &--sml-ver-gutter {
+    &--small-grid {
         &:not(:last-child) {
             margin-bottom: $gutter-vertical-sml;
+            @include respond(tab-land) {            
+                margin-bottom: $gutter-vertical-sml;
+            }
         }
     }
-    img { width: 100%; }
+    &--property-development {
+        position: relative;
+        top: 2rem;
+        ul {
+            width: 96%;
+            margin-left: 4%;
+            font-size: 1.6rem;
+            li {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    img {
+        width: 100%;
+    }
+    
 
-    // .col-direction {
-    //     img {width: 100%;}
-    //     &__normal {
-    //         &:not(:last-child) {
-    //             margin-right: 0;
-    //             margin-bottom: $gutter-vertical-sml;
-    //             @include respond(tab-land) {
-    //                 margin-bottom: 0;
-    //                 margin-right: $gutter-horizontal;
-    //             }
-    //         &--sml-hrz-gutter {
-    //             &:not(:last-child) {
-    //                 @include respond(tab-land) {
-    //                     margin-right: $gutter-sml-horizontal;
-    //                 }
-    //             }
-    //         }
+    // [class^="col-"] {
+        
+    //     &:not(:last-child) {
+    //         margin-right: 0;
+    //         margin-bottom: $gutter-vertical-lrg;
+
     //         @include respond(tab-land) {
-    //             float: left;
+    //             margin-right: $gutter-horizontal;
     //         }
     //     }
-    //     &__reversed {
-    //         &:not(:last-child) {
-    //             margin-right: 0;
-    //             margin-bottom: $gutter-vertical-med;
-    //         }
-    //         &:last-child {
-    //             @include respond(tab-land) {
-    //                 margin-right: $gutter-horizontal;
-    //             }
-    //         }
-    //         @include respond(tab-land) {
-    //             float: right;
-    //         }
+
+    //     @include respond(tab-land) {
+    //         float: left;
     //     }
     // }
 
     .col-direction__normal {
-        img {width: 100%;}
+        img {
+            width: 100%;
+        }
         &:not(:last-child) {
             margin-right: 0;
             margin-bottom: $gutter-vertical-sml;
             @include respond(tab-land) {
-                margin-bottom: 0;
                 margin-right: $gutter-horizontal;
             }
         }
-        &--sml-hrz-gutter {
+        &.small-grid {
             &:not(:last-child) {
                 @include respond(tab-land) {
                     margin-right: $gutter-sml-horizontal;
@@ -79,6 +85,13 @@
         @include respond(tab-land) {
             float: left;
         }
+        // &--flex {
+        //     @include respond(tab-land) {
+        //         display: -webkit-box;
+        //         display: -ms-flexbox;
+        //         display: flex;
+        //     }
+        // }
     }
 
     .col-direction__reversed {
@@ -87,11 +100,18 @@
         }
         &:not(:last-child) {
             margin-right: 0;
-            margin-bottom: $gutter-vertical-med;
+            margin-bottom: $gutter-vertical-sml;
         }
         &:last-child {
             @include respond(tab-land) {
                 margin-right: $gutter-horizontal;
+            }
+        }
+        &.small-grid {
+            &:last-child{
+                @include respond(tab-land) {
+                    margin-right: $gutter-sml-horizontal;
+                }
             }
         }
         @include respond(tab-land) {
@@ -99,79 +119,71 @@
         }
     }
 
-    // med
     .col-1-of-2 {
         width: 100%;
         @include respond(tab-land) {
             width: calc((100% - #{$gutter-horizontal}) / 2);
         }
     }
+
     .col-1-of-3 {
         width: 100%;
         @include respond(tab-land) {
             width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
         }
-        &--sml-hrz-gutter {
+        &.small-grid {
            @include respond(tab-land) {
                 width: calc((100% - 2 * #{$gutter-sml-horizontal}) / 3);
             } 
         }
     }
+
     .col-2-of-3 {
         width: 100%;
         @include respond(tab-land) {
             width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
         }
-        &--sml-hrz-gutter {
+        &.small-grid {
            @include respond(tab-land) {
                 width: calc(2 * ((100% - 2 * #{$gutter-sml-horizontal}) / 3) + #{$gutter-sml-horizontal});
             } 
         }
     }
+
     .col-1-of-4 {
         width: 100%;
         @include respond(tab-land) {    
             width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
         }
-        &--sml-hrz-gutter {
+        &.small-grid {
            @include respond(tab-land) {
                 width: calc((100% - 3 * #{$gutter-sml-horizontal}) / 4);
             } 
         }
-        &--featured-properties {
-            width: 100%;
-            @include respond(desktop) {    
-                width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
-            }  
-        }
         
     }
+
     .col-2-of-4 {
         width: 100%;
         @include respond(tab-land) {
             width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
         }
-        &--sml-hrz-gutter {
+        &.small-grid {
            @include respond(tab-land) {
                 width: calc(2 * ((100% - 3 * #{$gutter-sml-horizontal}) / 4) + #{$gutter-sml-horizontal});
             } 
         }
     }
+
     .col-3-of-4 {
         width: 100%;
         @include respond(tab-land) {
             width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
         }
-        &--sml-hrz-gutter {
+        &.small-grid {
            @include respond(tab-land) {
                 width: calc(3 * ((100% - 3 * #{$gutter-sml-horizontal}) / 4) + 2 * #{$gutter-sml-horizontal});
             } 
-        }
-        &--featured-properties {
-            width: 100%;
-            @include respond(desktop) {    
-                width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
-            }  
         }
     }
 

@@ -14,28 +14,10 @@
         }
     }
 }
-    // &__property-grid {
-    //     position: relative;
-    //     top: 7rem;
-    // }
-    // &__footer {
-    //     position: relative;
-    //     top: 8rem;
-    // }
-
-
-
-/***test****/
-/*Zoom In*/
-// .imgTest#zoomIn img {
-//     -webkit-transform: scale(1);
-//     transform: scale(1);
-//     -webkit-transition: .3s ease-in-out;
-//     transition: .3s ease-in-out;
+// .row {
+//     &--property-development {
+//         position: relative;
+//         top: 1.5rem;
+        
+//     }
 // }
-// .imgTest#zoomIn:hover img {
-//     -webkit-transform: scale(1.3);
-//     transform: scale(1.3);
-// }
-
-// /
