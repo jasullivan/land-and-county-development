@@ -72,9 +72,6 @@ body {
   line-height: 1.7;
   color: #444; }
 
-p {
-  font-size: 1.6rem; }
-
 .homepage-heading {
   /* occasionally get wobble on animation. not known why but this is fixes it, */
   /* this hides the back part of an element when we transform it */
@@ -139,8 +136,7 @@ p {
   font-size: 3.25rem; }
 
 .heading-tertiary {
-  font-size: 2.5rem;
-  line-height: 1.25; }
+  font-size: 2.5rem; }
 
 .heading-detail {
   font-size: 2rem;
@@ -756,7 +752,7 @@ body.is-open {
     transition: all 0.5s; }
   .property-link__text {
     margin: 0rem 1rem 0rem 1.5rem;
-    font-size: 2rem; }
+    font-size: 1.8rem; }
   .property-link--desk {
     display: none; }
     @media only screen and (min-width: 75em) {
