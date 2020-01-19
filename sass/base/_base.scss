@@ -18,12 +18,26 @@ html {
         font-size: 75%; //1rem = 12, 12/16 = 75%
     }
 }
+// body {
+//     box-sizing: border-box; 
+//     max-width: 230rem;
+//     width: 100%;
+//     margin: 0 auto;
+    
+// }
+
 body {
     box-sizing: border-box; 
     max-width: 230rem;
     width: 100%;
+    height: auto;
     margin: 0 auto;
+    padding: 0px;
+    &.overflow-hid {
+        overflow-x: hidden; 
+    }
 }
+
 
 // utilties
 .u-marg-top {margin-top: 2rem;}

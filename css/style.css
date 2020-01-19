@@ -61,7 +61,11 @@ body {
   box-sizing: border-box;
   max-width: 230rem;
   width: 100%;
-  margin: 0 auto; }
+  height: auto;
+  margin: 0 auto;
+  padding: 0px; }
+  body.overflow-hid {
+    overflow-x: hidden; }
 
 .u-marg-top {
   margin-top: 2rem; }
@@ -570,6 +574,8 @@ body.is-open {
         font-size: 3rem; } }
 
 .angle-divider {
+  width: 100%;
+  max-width: 230rem;
   min-height: 225px;
   position: relative;
   opacity: 0.85;
@@ -789,9 +795,6 @@ body.is-open {
 .content-list {
   width: 96%;
   margin-left: 4%;
-  font-size: 1.6rem; }
-  @media only screen and (min-width: 56.25em) {
-    .content-list {
-      font-size: 1.8rem; } }
+  font-size: 1.8rem; }
   .content-list li {
     margin-bottom: 1rem; }

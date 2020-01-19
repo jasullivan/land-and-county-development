@@ -2,7 +2,6 @@
 window.onscroll = function () { stickyNav() };
 
 const navBar = document.querySelector(".navigation");
-// const logo = document.querySelector(".nav-icons__logo"); 
 const navScrollMarker = document.getElementById('navScrollMarker');
 const sticky = navScrollMarker.offsetTop - 150;
 const navMenu = document.querySelector(".nav-icons__menu");

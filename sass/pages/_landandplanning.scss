@@ -1,10 +1,10 @@
 .content-list {
     width: 96%;
     margin-left: 4%;
-    font-size: $default-font-size;
-    @include respond(tab-land) {
+    // font-size: $default-font-size;
+    // @include respond(tab-land) {
         font-size: 1.8rem;  
-    }
+    // }
     li {
         margin-bottom: 1rem;
     }
