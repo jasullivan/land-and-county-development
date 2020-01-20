@@ -272,6 +272,8 @@ a:hover {
   .col-lrg-4 {
     width: calc(100% / 12 * 4);
     float: left; }
+    .col-lrg-4--float-swap-right {
+      float: right; }
   .col-lrg-5 {
     width: calc(100% / 12 * 5);
     float: left; }
