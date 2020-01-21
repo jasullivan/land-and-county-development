@@ -52,7 +52,10 @@
         @include respond(tab-land) {
             padding: 0 0.75rem 1.25rem;
         }
-        img { width: 100%; }
+        img { 
+			width: 100%;
+			display: block;
+		}
     }
     &--text {
         padding: 0 0rem 0rem;
