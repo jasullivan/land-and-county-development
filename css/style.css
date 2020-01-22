@@ -162,12 +162,9 @@ a {
   position: relative;
   line-height: normal; }
   a.contact {
-    margin-bottom: 1.6rem;
-    font-size: 1.6rem;
+    margin: 0.5rem 0 1rem;
+    font-size: 1.8rem;
     display: block; }
-    @media only screen and (min-width: 56.25em) {
-      a.contact {
-        font-size: 1.8rem; } }
     a.contact--small-marg-bottom:not(:last-child) {
       margin-bottom: 0.3rem; }
 
