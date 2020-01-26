@@ -1,13 +1,9 @@
 // prevNext functionality
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
-// function plusSlides(n) {
-//     showSlides(slideIndex += n);
-//     console.log(n)
-// }
-let prevNextButtons = document.getElementsByClassName("prevnext-buttons");
-for (var i = 0; i < prevNextButtons.length; i++) {
+const prevNextButtons = document.getElementsByClassName("prevnext-buttons");
+for (let i = 0; i < prevNextButtons.length; i++) {
     prevNextButtons[i].addEventListener("click", function (e) {
         if (this.classList.contains('prevnext-buttons__prev')) {
             showSlides(slideIndex += -1);
@@ -21,7 +17,7 @@ for (var i = 0; i < prevNextButtons.length; i++) {
 
 // dot functionality
 let dots = document.getElementsByClassName("slideshow__dot");
-for (var y = 0; y < dots.length; y++) {
+for (let y = 0; y < dots.length; y++) {
     dots[y].addEventListener("click", function (e) {
         console.log('clicked')
         if (this.classList.contains('dotOne')) {

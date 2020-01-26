@@ -53,13 +53,13 @@ document.addEventListener("DOMContentLoaded", function(e) {
 // sticky nav and mob menu ends
 
 // arrow link from home page 
-let propertyArrowLinks = document.querySelectorAll('.property-link');
-for (let i = 0; i < propertyArrowLinks.length; i++) {
-    propertyArrowLinks[i].addEventListener("click", function (e) {
-        console.log(this);
-        this.classList.add('moveRight')
-    });
-}
+// const propertyArrowLinks = document.querySelectorAll('.property-link');
+// for (let i = 0; i < propertyArrowLinks.length; i++) {
+//     propertyArrowLinks[i].addEventListener("click", function (e) {
+//         console.log(this);
+//         this.classList.add('moveRight')
+//     });
+// }
 // arrow link from home page ends
 
 

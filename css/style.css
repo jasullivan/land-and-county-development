@@ -1,17 +1,14 @@
 /*
-0 - 600px:      Phone
-600 - 900px:    Tablet portrait
-900 - 1200px:   Tablet landscape
-[1200 - 1800] is where our normal styles apply
-1800px + :      Big desktop
+0 - 600px:     Phone
+600 - 900px:   Tablet portrait
+900 - 1200px:  Tablet landscape
+1200 - 1800px: Desktop
+1800px + :     Big desktop
 
 $breakpoint arguement choices:
-- phone
-- tab-port
 - tab-land
+- desktop
 - big-desktop
-
-1em = 16px
 */
 @keyframes moveInBottom {
   0% {
@@ -323,7 +320,7 @@ a:hover {
         transform: translate(0%, 0%); } }
 
 .footer {
-  background-color: black;
+  background-color: #000;
   padding: 10rem 0;
   font-size: 1.4rem;
   color: #bbb;
