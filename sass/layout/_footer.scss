@@ -11,15 +11,43 @@
     }
     &__logo-box {
         text-align: center;
-        margin-bottom: 2rem;
+        margin: 0rem auto 2rem;
+        width: 70%;
+        display: block;
+        cursor: pointer;
+        // transition: all 0.5s;
         @include respond(tab-land) {
+            width: 40%;
             margin-bottom: 3rem;
         }
+        &:hover {
+            color: $color-vlight-grey;
+        }
+        &:hover .footer__logo {
+            // color: $primary-color;
+            width: 80px;
+            height: 61px;
+            background: url("../imgs/landc-logo-dbl3.png");
+            background-repeat: no-repeat;
+            background-size: 160px 61px;
+            background-position: -80px;
+        }
     }
+    // &__logo {
+    //     width: 6rem;
+    //     height: auto;
+    // }
     &__logo {
-        width: 8rem;
-        height: auto;
+        width: 80px;
+        height: 61px;
+        background: url("../imgs/landc-logo-dbl3.png");
+        background-repeat: no-repeat;
+        background-size: 160px 61px;
+        margin: 0 auto 1rem;
     }
+    // .card:hover {
+    //     background: url("/examples/images/card-front.jpg") no-repeat;
+    // }
     &__title {
         font-weight: normal;
         font-size: 2.2rem;
@@ -47,10 +75,10 @@
             text-decoration: none;
             // text-transform: uppercase;
             display: inline-block;
-            transition: all 0.8s;
+            transition: all 0.5s;
         }
         &:hover {
-            color: $primary-color;
+            color: $color-vlight-grey;
             box-shadow: 0 1rem 2rem rgba($color-black, .4);
         }
     }

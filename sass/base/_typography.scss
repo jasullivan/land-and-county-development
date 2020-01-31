@@ -96,6 +96,9 @@ a {
         margin: 0.5rem 0 1rem;
         font-size: 1.8rem;  
         display: block;
+        &:hover {
+            color: $primary-color;
+        }
         &--small-marg-bottom {
             &:not(:last-child) {
                 margin-bottom: 0.3rem;

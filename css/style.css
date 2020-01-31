@@ -162,6 +162,8 @@ a {
     margin: 0.5rem 0 1rem;
     font-size: 1.8rem;
     display: block; }
+    a.contact:hover {
+      color: #3ab54a; }
     a.contact--small-marg-bottom:not(:last-child) {
       margin-bottom: 0.3rem; }
 
@@ -332,13 +334,30 @@ a:hover {
       padding: 8rem 0; } }
   .footer__logo-box {
     text-align: center;
-    margin-bottom: 2rem; }
+    margin: 0rem auto 2rem;
+    width: 70%;
+    display: block;
+    cursor: pointer; }
     @media only screen and (min-width: 56.25em) {
       .footer__logo-box {
+        width: 40%;
         margin-bottom: 3rem; } }
+    .footer__logo-box:hover {
+      color: #dcdcdc; }
+    .footer__logo-box:hover .footer__logo {
+      width: 80px;
+      height: 61px;
+      background: url("../imgs/landc-logo-dbl3.png");
+      background-repeat: no-repeat;
+      background-size: 160px 61px;
+      background-position: -80px; }
   .footer__logo {
-    width: 8rem;
-    height: auto; }
+    width: 80px;
+    height: 61px;
+    background: url("../imgs/landc-logo-dbl3.png");
+    background-repeat: no-repeat;
+    background-size: 160px 61px;
+    margin: 0 auto 1rem; }
   .footer__title {
     font-weight: normal;
     font-size: 2.2rem; }
@@ -358,9 +377,9 @@ a:hover {
   .footer__link:link, .footer__link:visited {
     text-decoration: none;
     display: inline-block;
-    transition: all 0.8s; }
+    transition: all 0.5s; }
   .footer__link:hover {
-    color: #3ab54a;
+    color: #dcdcdc;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
 
 body.is-open {
@@ -533,7 +552,7 @@ body.is-open {
   top: 0;
   height: 40rem;
   background-attachment: scroll;
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 2rem;
